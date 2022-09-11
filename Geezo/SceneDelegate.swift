@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: SignInViewController())
+        window?.rootViewController = UINavigationController(rootViewController: SignInController())
         window?.backgroundColor = colorStyle.brand1
         window?.makeKeyAndVisible()
     }

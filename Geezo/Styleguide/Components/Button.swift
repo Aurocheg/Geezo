@@ -48,12 +48,12 @@ extension Button {
         
         button.setTitle(text, for: .normal)
         button.setTitleColor(colorStyle.brand1, for: .normal)
-        button.titleLabel?.font = UIFont(name: buttonFont, size: 14.0)
+        button.titleLabel?.font = UIFont(name: buttonFont + "-" + "Regular", size: 14.0)
         
         switch type {
         case .start:
             button.frame = CGRect(x: 0, y: 0, width: startButtonSizes.width, height: startButtonSizes.height)
-            button.titleLabel?.font = UIFont(name: buttonFont, size: 16.0)
+            button.titleLabel?.font = UIFont(name: buttonFont + "-" + "Bold", size: 16.0)
             button.titleLabel?.text = button.titleLabel?.text?.uppercased()
         case .okCancel:
             button.frame = CGRect(x: 0, y: 0, width: okCancelButtonsSizes.width, height: okCancelButtonsSizes.height)

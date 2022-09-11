@@ -9,9 +9,18 @@
 /* Begin PBXBuildFile section */
 		DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */; };
 		DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */; };
-		DE12F9E728C8F19F00F416EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E528C8F19F00F416EF /* Main.storyboard */; };
 		DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E828C8F19F00F416EF /* Assets.xcassets */; };
-		DE12F9EC28C8F19F00F416EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9EA28C8F19F00F416EF /* LaunchScreen.storyboard */; };
+		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
+		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
+		DE4DA56A28CDEB6900E3DE1B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */; };
+		DE4DA56B28CDEB6900E3DE1B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56728CDEB6900E3DE1B /* Roboto-Bold.ttf */; };
+		DE4DA56F28CDECF100E3DE1B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56C28CDECF100E3DE1B /* Montserrat-Medium.ttf */; };
+		DE4DA57028CDECF100E3DE1B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56D28CDECF100E3DE1B /* Montserrat-Regular.ttf */; };
+		DE4DA57128CDECF100E3DE1B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56E28CDECF100E3DE1B /* Montserrat-SemiBold.ttf */; };
+		DE4DA57328CDEE1500E3DE1B /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */; };
+		DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57428CDEE5700E3DE1B /* SignInController.swift */; };
+		DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */; };
+		DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */; };
 		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
 		DE510F1728CDDE78002D9D18 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1628CDDE78002D9D18 /* FontStyle.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
@@ -26,10 +35,19 @@
 		DE12F9DC28C8F19F00F416EF /* Geezo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE12F9E628C8F19F00F416EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE12F9E828C8F19F00F416EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE12F9EB28C8F19F00F416EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE12F9ED28C8F19F00F416EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		DE4DA56728CDEB6900E3DE1B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		DE4DA56C28CDECF100E3DE1B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		DE4DA56D28CDECF100E3DE1B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		DE4DA56E28CDECF100E3DE1B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		DE4DA57428CDEE5700E3DE1B /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE510F1628CDDE78002D9D18 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
@@ -70,7 +88,7 @@
 		DE12F9DE28C8F19F00F416EF /* Geezo */ = {
 			isa = PBXGroup;
 			children = (
-				DE12F9F628C8F1CA00F416EF /* Resources */,
+				DE4DA55F28CDEB3D00E3DE1B /* Fonts */,
 				DE81759F28C8F45E0082FF16 /* Styleguide */,
 				DE12F9F328C8F1A900F416EF /* Model */,
 				DE12F9F428C8F1B500F416EF /* View */,
@@ -78,6 +96,7 @@
 				DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */,
 				DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */,
 				DE12F9ED28C8F19F00F416EF /* Info.plist */,
+				DE12F9E828C8F19F00F416EF /* Assets.xcassets */,
 			);
 			path = Geezo;
 			sourceTree = "<group>";
@@ -85,6 +104,7 @@
 		DE12F9F328C8F1A900F416EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +112,7 @@
 		DE12F9F428C8F1B500F416EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,18 +120,24 @@
 		DE12F9F528C8F1BA00F416EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DE4DA57428CDEE5700E3DE1B /* SignInController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		DE12F9F628C8F1CA00F416EF /* Resources */ = {
+		DE4DA55F28CDEB3D00E3DE1B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DE12F9E528C8F19F00F416EF /* Main.storyboard */,
-				DE12F9E828C8F19F00F416EF /* Assets.xcassets */,
-				DE12F9EA28C8F19F00F416EF /* LaunchScreen.storyboard */,
+				DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */,
+				DE4DA56728CDEB6900E3DE1B /* Roboto-Bold.ttf */,
+				DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */,
+				DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */,
+				DE4DA56C28CDECF100E3DE1B /* Montserrat-Medium.ttf */,
+				DE4DA56D28CDECF100E3DE1B /* Montserrat-Regular.ttf */,
+				DE4DA56E28CDECF100E3DE1B /* Montserrat-SemiBold.ttf */,
+				DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */,
 			);
-			path = Resources;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
@@ -194,9 +221,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE12F9EC28C8F19F00F416EF /* LaunchScreen.storyboard in Resources */,
+				DE4DA57028CDECF100E3DE1B /* Montserrat-Regular.ttf in Resources */,
+				DE4DA56B28CDEB6900E3DE1B /* Roboto-Bold.ttf in Resources */,
+				DE4DA56A28CDEB6900E3DE1B /* Roboto-Regular.ttf in Resources */,
+				DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */,
+				DE4DA57128CDECF100E3DE1B /* Montserrat-SemiBold.ttf in Resources */,
+				DE4DA57328CDEE1500E3DE1B /* Quicksand-Bold.ttf in Resources */,
+				DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */,
 				DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */,
-				DE12F9E728C8F19F00F416EF /* Main.storyboard in Resources */,
+				DE4DA56F28CDECF100E3DE1B /* Montserrat-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,11 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
 				DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */,
 				DE510F1728CDDE78002D9D18 /* FontStyle.swift in Sources */,
+				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
+				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
 				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
 				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
 				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,
@@ -221,25 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DE12F9E528C8F19F00F416EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE12F9E628C8F19F00F416EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DE12F9EA28C8F19F00F416EF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE12F9EB28C8F19F00F416EF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DE12F9EE28C8F19F00F416EF /* Debug */ = {
@@ -368,7 +385,6 @@
 				INFOPLIST_FILE = Geezo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,7 +412,6 @@
 				INFOPLIST_FILE = Geezo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
