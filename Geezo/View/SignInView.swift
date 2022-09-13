@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInView: UIView {
+final class SignInView: UIView {
     // MARK: UI Elements
     private var mainTitleLabel = UILabel()
     private var emailTF = UITextField()
@@ -28,32 +28,38 @@ class SignInView: UIView {
     init() {
         super.init(frame: .zero)
         
-        setupViews()
+        if let image = UIImage(named: "signInBackground") {
+            self.backgroundColor = UIColor(patternImage: image)
+        }
+                
+        createMainTitleLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Setup Views Method
-    func setupViews() {
-        createMainTitleLabel()
-    }
-    
     // MARK: UI Methods
-    func createMainTitleLabel() {
+    private func createMainTitleLabel() {
         mainTitleLabel = label.createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
-        mainTitleLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 200)
-
-        addConstraintsToTitleLabel(title: mainTitleLabel)
-        
         addSubview(mainTitleLabel)
+
+        addConstraintToTitleLabel()
     }
     
-    // MARK: Constraints Methods
-    func addConstraintsToTitleLabel(title: UILabel) {
-        NSLayoutConstraint.activate([
-            
-        ])
+    // MARK: Constraints
+    private func addConstraintToTitleLabel() {
+        mainTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        let labelVFL = ["mainTitleLabel": mainTitleLabel]
+        let metrics = ["height": 42, "width": self.bounds.size.width - 80, "top": 130]
+        
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[mainTitleLabel(height)]",
+                                                           options: [],
+                                                           metrics: metrics,
+                                                           views: labelVFL))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[mainTitleLabel(width)]|",
+                                                           options: [],
+                                                           metrics: metrics,
+                                                           views: labelVFL))
     }
 }

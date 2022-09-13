@@ -8,6 +8,6 @@
 import Foundation
 
 struct SignInModel {
-    let email: String?
-    let password: String?
+    var emails = [Array<String>]()
+    var passwords = [Array<String>]()
 }
