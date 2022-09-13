@@ -8,48 +8,80 @@
 import Foundation
 import UIKit
 
-struct TextField {
-    static let textFieldFont = "Montserrat Regular"
-    static let textFieldSizes = (width: 295, height: 35)
-    static let textFieldPlaceholderColor = UIColor(red: 0.624, green: 0.624, blue: 0.624, alpha: 1)
-    static let textFieldTextColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
-    static let textFieldLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 0.2)
-    static let textFieldActiveLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
+enum TextFieldType {
+    case email
+    case password
+    case name
+    case phone
 }
 
+struct TextField {
+    public let textFieldFont = "Montserrat Regular"
+    public let textFieldSizes = (width: 295, height: 35)
+    public let textFieldPlaceholderColor = UIColor(red: 0.624, green: 0.624, blue: 0.624, alpha: 1)
+    public let textFieldTextColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
+    public let textFieldLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 0.2)
+    public let textFieldActiveLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
+}
+
+// MARK: TextField Component Extension
 extension TextField {
-    public static func createTextField(placeholder: String = "", image: UIImage, secureTextEntry: Bool = false) -> UITextField {
-        let textField = UITextField()
-        textField.frame = CGRect(x: 0, y: 0,
-                                 width: textFieldSizes.width,
-                                 height: textFieldSizes.height)
-        textField.borderStyle = .none
-        textField.textColor = textFieldTextColor
+    public func createTF(placeholder: String = "", type: TextFieldType) -> UITextField {
+        let textField = textFieldInit()
         
-        if secureTextEntry {
+        textField.font = UIFont(name: textFieldFont, size: 14.0)
+        
+        switch type {
+        case .email:
+            if let image = UIImage(named: "emailIcon") {
+                addLeftViewMode(textField: textField, image: image)
+            }
+        case .password:
+            if let image = UIImage(named: "passwordIcon") {
+                addLeftViewMode(textField: textField, image: image)
+            }
             textField.font = UIFont(name: textFieldFont, size: 18.0)
             textField.isSecureTextEntry = true
-        } else {
-            textField.font = UIFont(name: textFieldFont, size: 14.0)
+        case .name:
+            if let image = UIImage(named: "nameIcon") {
+                addLeftViewMode(textField: textField, image: image)
+            }
+        case .phone:
+            if let image = UIImage(named: "phoneIcon") {
+                addLeftViewMode(textField: textField, image: image)
+            }
         }
         
-        // Adding custom placeholder color
+        // MARK: Adding custom placeholder color
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: textFieldPlaceholderColor])
-        
-        // Adding left image to TextField
-        textField.leftViewMode = .always
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 17, height: 17))
-        imageView.image = image
-        textField.leftView = imageView
-        
+                
+        // MARK: Adding Line to TextField
         addLineTF(textField: textField)
         
         return textField
     }
     
-    public static func addLineTF(textField: UITextField) {
+    public func textFieldInit() -> UITextField {
+        let textField = UITextField()
+        textField.frame = CGRect(x: 100, y: 100,
+                                 width: textFieldSizes.width,
+                                 height: textFieldSizes.height)
+        textField.borderStyle = .none
+        textField.textColor = textFieldTextColor
+        
+        return textField
+    }
+    
+    public func addLeftViewMode(textField: UITextField, image: UIImage) {
+        textField.leftViewMode = .always
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 17, height: 17))
+        imageView.image = image
+        textField.leftView = imageView
+    }
+    
+    public func addLineTF(textField: UITextField) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: textField.frame.height - 1, width: textField.frame.width, height: 2)
         bottomLine.backgroundColor = UIColor.lightGray.cgColor

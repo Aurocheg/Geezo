@@ -15,8 +15,4 @@ class SignInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    func setupConstraints() {
-        
-    }
 }
