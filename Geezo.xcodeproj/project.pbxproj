@@ -21,6 +21,7 @@
 		DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57428CDEE5700E3DE1B /* SignInController.swift */; };
 		DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */; };
 		DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */; };
+		DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */; };
 		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
 		DE510F1728CDDE78002D9D18 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1628CDDE78002D9D18 /* FontStyle.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
@@ -48,6 +49,7 @@
 		DE4DA57428CDEE5700E3DE1B /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE510F1628CDDE78002D9D18 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */,
 				DE4DA56C28CDECF100E3DE1B /* Montserrat-Medium.ttf */,
 				DE4DA56D28CDECF100E3DE1B /* Montserrat-Regular.ttf */,
+				DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */,
 				DE4DA56E28CDECF100E3DE1B /* Montserrat-SemiBold.ttf */,
 				DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */,
 			);
@@ -221,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */,
 				DE4DA57028CDECF100E3DE1B /* Montserrat-Regular.ttf in Resources */,
 				DE4DA56B28CDEB6900E3DE1B /* Roboto-Bold.ttf in Resources */,
 				DE4DA56A28CDEB6900E3DE1B /* Roboto-Regular.ttf in Resources */,

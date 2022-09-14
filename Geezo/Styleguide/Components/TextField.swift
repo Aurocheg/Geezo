@@ -16,8 +16,8 @@ enum TextFieldType {
 }
 
 struct TextField {
-    public let textFieldFont = "Montserrat Regular"
-    public let textFieldSizes = (width: 295, height: 35)
+    public let textFieldFont = "Montserrat-Regular"
+    public let textFieldSizes = (width: Int(UIScreen.main.bounds.width - 80), height: 35)
     public let textFieldPlaceholderColor = UIColor(red: 0.624, green: 0.624, blue: 0.624, alpha: 1)
     public let textFieldTextColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
     public let textFieldLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 0.2)
@@ -40,7 +40,6 @@ extension TextField {
             if let image = UIImage(named: "passwordIcon") {
                 addLeftViewMode(textField: textField, image: image)
             }
-            textField.font = UIFont(name: textFieldFont, size: 18.0)
             textField.isSecureTextEntry = true
         case .name:
             if let image = UIImage(named: "nameIcon") {
@@ -63,9 +62,9 @@ extension TextField {
         return textField
     }
     
-    public func textFieldInit() -> UITextField {
+    private func textFieldInit() -> UITextField {
         let textField = UITextField()
-        textField.frame = CGRect(x: 100, y: 100,
+        textField.frame = CGRect(x: 0, y: 0,
                                  width: textFieldSizes.width,
                                  height: textFieldSizes.height)
         textField.borderStyle = .none
@@ -74,14 +73,14 @@ extension TextField {
         return textField
     }
     
-    public func addLeftViewMode(textField: UITextField, image: UIImage) {
+    private func addLeftViewMode(textField: UITextField, image: UIImage) {
         textField.leftViewMode = .always
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 17, height: 17))
         imageView.image = image
         textField.leftView = imageView
     }
     
-    public func addLineTF(textField: UITextField) {
+    private func addLineTF(textField: UITextField) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: textField.frame.height - 1, width: textField.frame.width, height: 2)
         bottomLine.backgroundColor = UIColor.lightGray.cgColor

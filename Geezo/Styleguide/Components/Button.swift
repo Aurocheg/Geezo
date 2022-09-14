@@ -15,20 +15,22 @@ enum ButtonType {
     case follow
     case label
     case addSong
+    case social
 }
 
 struct Button {
-    static let buttonFont = "Roboto"
-    static let startButtonSizes = (width: 295, height: 45)
-    static let okCancelButtonsSizes = (width: 94, height: 32)
-    static let addNewPlaylistButtonSizes = (width: 150, height: 40)
-    static let followButtonSizes = (width: 96, height: 28)
-    static let labelButtonSizes = (width: 85, height: 28)
-    static let addSongButtonSizes = (width: 264, height: 34)
+    public let buttonFont = "Roboto"
+    public let startButtonSizes = (width: 295, height: 45)
+    public let okCancelButtonsSizes = (width: 94, height: 32)
+    public let addNewPlaylistButtonSizes = (width: 150, height: 40)
+    public let followButtonSizes = (width: 96, height: 28)
+    public let labelButtonSizes = (width: 85, height: 28)
+    public let addSongButtonSizes = (width: 264, height: 34)
+    public let socialButtonSizes = (width: 40, height: 40)
 }
 
 extension Button {
-    public static func createButton(type: ButtonType, background: Bool = true, border: Bool = false, text: String) -> UIButton {
+    public func createButton(type: ButtonType, background: Bool = true, border: Bool = false, text: String = "", image: UIImage? = nil) -> UIButton {
         let colorStyle = ColorStyle()
         
         let button = UIButton()
@@ -65,6 +67,11 @@ extension Button {
             button.frame = CGRect(x: 0, y: 0, width: labelButtonSizes.width, height: labelButtonSizes.height)
         case .addSong:
             button.frame = CGRect(x: 0, y: 0, width: addSongButtonSizes.width, height: addSongButtonSizes.height)
+        case .social:
+            button.frame = CGRect(x: 0, y: 0, width: socialButtonSizes.width, height: socialButtonSizes.height)
+            if let myImage = image {
+                button.setBackgroundImage(myImage, for: .normal)
+            }
         }
         
         return button
