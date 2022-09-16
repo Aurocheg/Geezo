@@ -90,12 +90,22 @@ final class SignInConstraints: UIView {
         let metrics = ["top": 135, "width": Int(UIScreen.main.bounds.width - 80), "height": 13]
         
         parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[signInButton]-top-[connectWithLabel(height)]",
-                                                      options: [],
+                                                             options: [],
                                                       metrics: metrics,
                                                       views: VFL))
         parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[connectWithLabel(width)]",
-                                                      options: [],
+                                                             options: [.alignAllCenterX],
                                                       metrics: metrics,
                                                       views: VFL))
+    }
+    
+    public func addConstraintsToSocialButtonsView(view: UIView, connectWithLabel: UILabel, parent: AnyObject) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let VFL = ["connectWithLabel": connectWithLabel, "socialButtonsView": view]
+        let metrics = ["top": 20]
+        
+        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[connectWithLabel]-top-[socialButtonsView]", options: [.alignAllCenterX], metrics: metrics, views: VFL))
+        
     }
 }

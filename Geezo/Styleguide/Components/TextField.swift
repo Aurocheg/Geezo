@@ -34,30 +34,46 @@ extension TextField {
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: textFieldPlaceholderColor])
         textField.font = UIFont(name: textFieldFont, size: 14.0)
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         
         switch type {
         case .email:
             if let icon = UIImage(named: "emailIcon") {
-                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+                textField.setTextFieldIcon(icon: icon)
             }
+            
+            textField.textContentType = .emailAddress
+            textField.keyboardType = .emailAddress
         case .password:
             if let icon = UIImage(named: "passwordIcon") {
-                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+                textField.setTextFieldIcon(icon: icon)
             }
+            
+            textField.textContentType = .password
             textField.isSecureTextEntry = true
+            
+            if let icon = UIImage(named: "showPasswordIcon") {
+                textField.setShowPasswordButton(icon: icon)
+            }
             
         case .name:
             if let icon = UIImage(named: "nameIcon") {
-                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+                textField.setTextFieldIcon(icon: icon)
             }
+            
+            textField.textContentType = .name
         case .phone:
             if let icon = UIImage(named: "phoneIcon") {
-                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+                textField.setTextFieldIcon(icon: icon)
             }
+            
+            textField.textContentType = .telephoneNumber
+            textField.keyboardType = .phonePad
         }
                 
         // MARK: Adding Line to TextField
-        textField.addUnderLine()
+        textField.setUnderLine()
         
         return textField
     }
@@ -76,22 +92,29 @@ extension TextField {
 }
 
 extension UITextField {
-    func setTextIconAndPlaceholder(icon: UIImage, placeholder: String) {
+    func setTextFieldIcon(icon: UIImage) {
         let imageView = UIImageView()
         imageView.image = icon
         imageView.frame = CGRect(x: 0, y: 0, width: 17, height: 17)
         
         let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: 40, height: 15)
+        view.frame = CGRect(x: 0, y: 0, width: 40, height: 17)
         view.backgroundColor = .clear
         view.addSubview(imageView)
         
-        self.leftView = view
-        self.leftViewMode = .always
-        self.placeholder = placeholder
+        leftView = view
+        leftViewMode = .always
     }
     
-    func addUnderLine() {
+    func setShowPasswordButton(icon: UIImage) {
+        let button = UIButton()
+        
+        button.setImage(icon, for: .normal)
+        addSubview(button)
+        button.frame = CGRect(x: self.frame.width - 20, y: 0, width: 17, height: 17)
+    }
+    
+    func setUnderLine() {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 2)
         bottomLine.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor

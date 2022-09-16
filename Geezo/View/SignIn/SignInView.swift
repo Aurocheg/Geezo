@@ -13,6 +13,8 @@ final class SignInView: UIView {
     private var button = Button()
     private var label = Label()
     private var textField = TextField()
+    
+    // MARK: - Constraints
     private var signInConstraints = SignInConstraints()
     
     // MARK: - UI Elements
@@ -23,11 +25,12 @@ final class SignInView: UIView {
     private var forgotPasswordButton = UIButton()
     private var signInButton = UIButton()
     private var connectWithLabel = UILabel()
+    private let socialButtonsView = UIView()
     private var signUpLabel = UILabel()
     private var signUpButton = UIButton()
     
     // MARK: - Variables
-    private let socialButtonsImagesArray = [UIImage(named: "facebook"), UIImage(named: "google-plus"), UIImage(named: "twitter")]
+    private let socialIconsArray = [UIImage(named: "facebook"), UIImage(named: "google-plus"), UIImage(named: "twitter")]
     
     // MARK: - Init
     init() {
@@ -66,6 +69,8 @@ final class SignInView: UIView {
         connectWithLabel = label.createLabel(font: "Montserrat-Bold", size: 11.0, color: colorStyle.neutral2, text: "Connect with")
         addSettingsToConnectWithLabel()
         
+        createSocialButtons()
+        
         // MARK: - Adding subviews
         addSubview(mainTitleLabel)
         addSubview(emailTF)
@@ -82,6 +87,7 @@ final class SignInView: UIView {
         signInConstraints.addConstraintsToForgotPasswordButton(button: forgotPasswordButton, passwordTF: passwordTF, parent: self)
         signInConstraints.addConstraintsToSignInButton(signInButton: signInButton, forgotPasswordButton: forgotPasswordButton, parent: self)
         signInConstraints.addConstraintsToConnectWithLabel(label: connectWithLabel, signInButton: signInButton, parent: self)
+        signInConstraints.addConstraintsToSocialButtonsView(view: socialButtonsView, connectWithLabel: connectWithLabel, parent: self)
     }
     
     // MARK: - UI Methods
@@ -101,5 +107,21 @@ final class SignInView: UIView {
     private func addSettingsToConnectWithLabel() {
         connectWithLabel.textAlignment = .center
         connectWithLabel.drawLineOnBothSides(labelWidth: connectWithLabel.frame.width, color: .lightGray)
+    }
+    
+    private func createSocialButtons() {
+        var padding = 0
+        
+        socialButtonsView.frame = CGRect(x: 0, y: 0, width: 144, height: 40)
+        
+        for icon in socialIconsArray {
+            let button = UIButton()
+            button.setImage(icon, for: .normal)
+            button.frame = CGRect(x: padding, y: 0, width: 40, height: 40)
+            socialButtonsView.addSubview(button)
+            padding += Int(button.frame.width) + 12
+        }
+        
+        addSubview(socialButtonsView)
     }
 }
