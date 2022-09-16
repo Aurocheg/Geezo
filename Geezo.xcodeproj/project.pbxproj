@@ -10,6 +10,8 @@
 		DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */; };
 		DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */; };
 		DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E828C8F19F00F416EF /* Assets.xcassets */; };
+		DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953428D4D9FB00375D48 /* SignInExtensions.swift */; };
+		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
 		DE4DA56A28CDEB6900E3DE1B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */; };
@@ -23,7 +25,6 @@
 		DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */; };
 		DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */; };
 		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
-		DE510F1728CDDE78002D9D18 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1628CDDE78002D9D18 /* FontStyle.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -38,6 +39,8 @@
 		DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE12F9E828C8F19F00F416EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE12F9ED28C8F19F00F416EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE27953428D4D9FB00375D48 /* SignInExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtensions.swift; sourceTree = "<group>"; };
+		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		DE510F1628CDDE78002D9D18 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		DE12F9F428C8F1B500F416EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */,
+				DE27953328D4D9E200375D48 /* SignIn */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +127,16 @@
 				DE4DA57428CDEE5700E3DE1B /* SignInController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE27953328D4D9E200375D48 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */,
+				DE27953428D4D9FB00375D48 /* SignInExtensions.swift */,
+				DE27953628D4E08200375D48 /* SignInConstraints.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		DE4DA55F28CDEB3D00E3DE1B /* Fonts */ = {
@@ -149,7 +161,6 @@
 				DE8175B028CBC5F70082FF16 /* Components */,
 				DE8175A028C8F46D0082FF16 /* ColorStyle.swift */,
 				DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */,
-				DE510F1628CDDE78002D9D18 /* FontStyle.swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -246,12 +257,13 @@
 			files = (
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
+				DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
 				DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */,
-				DE510F1728CDDE78002D9D18 /* FontStyle.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
+				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
 				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
 				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,

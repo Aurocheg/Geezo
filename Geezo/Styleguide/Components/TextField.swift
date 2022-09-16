@@ -29,39 +29,40 @@ extension TextField {
     public func createTF(placeholder: String = "", type: TextFieldType) -> UITextField {
         let textField = textFieldInit()
         
-        textField.font = UIFont(name: textFieldFont, size: 14.0)
-        
-        switch type {
-        case .email:
-            if let image = UIImage(named: "emailIcon") {
-                addLeftViewMode(textField: textField, image: image)
-            }
-        case .password:
-            if let image = UIImage(named: "passwordIcon") {
-                addLeftViewMode(textField: textField, image: image)
-            }
-            textField.isSecureTextEntry = true
-        case .name:
-            if let image = UIImage(named: "nameIcon") {
-                addLeftViewMode(textField: textField, image: image)
-            }
-        case .phone:
-            if let image = UIImage(named: "phoneIcon") {
-                addLeftViewMode(textField: textField, image: image)
-            }
-        }
-        
         // MARK: Adding custom placeholder color
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: textFieldPlaceholderColor])
+        textField.font = UIFont(name: textFieldFont, size: 14.0)
+        
+        switch type {
+        case .email:
+            if let icon = UIImage(named: "emailIcon") {
+                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+            }
+        case .password:
+            if let icon = UIImage(named: "passwordIcon") {
+                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+            }
+            textField.isSecureTextEntry = true
+            
+        case .name:
+            if let icon = UIImage(named: "nameIcon") {
+                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+            }
+        case .phone:
+            if let icon = UIImage(named: "phoneIcon") {
+                textField.setTextIconAndPlaceholder(icon: icon, placeholder: placeholder)
+            }
+        }
                 
         // MARK: Adding Line to TextField
-        addLineTF(textField: textField)
+        textField.addUnderLine()
         
         return textField
     }
     
+    // MARK: Aditional Methods
     private func textFieldInit() -> UITextField {
         let textField = UITextField()
         textField.frame = CGRect(x: 0, y: 0,
@@ -72,19 +73,29 @@ extension TextField {
         
         return textField
     }
-    
-    private func addLeftViewMode(textField: UITextField, image: UIImage) {
-        textField.leftViewMode = .always
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 17, height: 17))
-        imageView.image = image
-        textField.leftView = imageView
+}
+
+extension UITextField {
+    func setTextIconAndPlaceholder(icon: UIImage, placeholder: String) {
+        let imageView = UIImageView()
+        imageView.image = icon
+        imageView.frame = CGRect(x: 0, y: 0, width: 17, height: 17)
+        
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 40, height: 15)
+        view.backgroundColor = .clear
+        view.addSubview(imageView)
+        
+        self.leftView = view
+        self.leftViewMode = .always
+        self.placeholder = placeholder
     }
     
-    private func addLineTF(textField: UITextField) {
+    func addUnderLine() {
         let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: textField.frame.height - 1, width: textField.frame.width, height: 2)
-        bottomLine.backgroundColor = UIColor.lightGray.cgColor
-        textField.borderStyle = UITextField.BorderStyle.none
-        textField.layer.addSublayer(bottomLine)
+        bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 2)
+        bottomLine.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        self.borderStyle = UITextField.BorderStyle.none
+        self.layer.addSublayer(bottomLine)
     }
 }
