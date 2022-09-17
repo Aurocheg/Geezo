@@ -9,103 +9,56 @@ import Foundation
 import UIKit
 
 final class SignInConstraints: UIView {
-    public func addConstraintToTitleLabel(title: UILabel, parent: AnyObject) {
+    public func addConstraintsToMainTitle(_ title: UILabel, view: UIView) {
         title.translatesAutoresizingMaskIntoConstraints = false
-        let labelVFL = ["mainTitleLabel": title]
-        let metrics = ["height": 42, "width": parent.bounds.size.width - 80, "top": 130]
-        
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[mainTitleLabel(height)]",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: labelVFL))
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[mainTitleLabel(width)]|",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: labelVFL))
+        title.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40.0).isActive = true
+        title.topAnchor.constraint(equalTo: view.topAnchor, constant: 105.0).isActive = true
+        title.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        title.heightAnchor.constraint(equalToConstant: 42.0).isActive = true
     }
     
-    public func addConstraintsToTF(emailTF: UITextField, passwordTF: UITextField, title: UILabel, parent: AnyObject) {
-        emailTF.translatesAutoresizingMaskIntoConstraints = false
-        passwordTF.translatesAutoresizingMaskIntoConstraints = false
-
-        let VFL = ["emailTF": emailTF, "passwordTF": passwordTF, "mainTitleLabel": title]
-        let metrics = ["top": 68]
-
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[mainTitleLabel]-top-[emailTF]",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: VFL))
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[emailTF]",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: VFL))
-
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[emailTF]-50-[passwordTF]",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: VFL))
-
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[passwordTF]",
-                                                           options: [],
-                                                           metrics: metrics,
-                                                           views: VFL))
+    public func addConstraintsToTF(arrayTF: Array<UITextField>, view: UIView, parent: UILabel) {
+        for (i, textField) in arrayTF.enumerated() {
+            textField.translatesAutoresizingMaskIntoConstraints = false
+            
+            textField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40.0).isActive = true
+            
+            if i == 0 {
+                textField.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 68.0).isActive = true
+            } else {
+                textField.topAnchor.constraint(equalTo: arrayTF[i - 1].bottomAnchor, constant: 36.0).isActive = true
+            }
+            
+            textField.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            textField.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        }
     }
     
-    public func addConstraintsToForgotPasswordButton(button: UIButton, passwordTF: UITextField, parent: AnyObject) {
-        button.translatesAutoresizingMaskIntoConstraints = false
+    public func addConstraintsToForgotPassword(_ forgotPasswordButton: UIButton, view: UIView, parent: UITextField) {
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let VFL = ["forgotPasswordButton": button, "passwordTF": passwordTF]
-        let metrics = ["top": 35]
-        
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[passwordTF]-top-[forgotPasswordButton]",
-                                                      options: [],
-                                                      metrics: metrics,
-                                                      views: VFL))
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[forgotPasswordButton]-40-|",
-                                                      options: [],
-                                                      metrics: metrics,
-                                                      views: VFL))
+        forgotPasswordButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40.0).isActive = true
+        forgotPasswordButton.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 36.0).isActive = true
+        forgotPasswordButton.widthAnchor.constraint(equalToConstant: 130.0).isActive = true
+        forgotPasswordButton.heightAnchor.constraint(equalToConstant: 22.0).isActive = true
     }
     
-    public func addConstraintsToSignInButton(signInButton: UIButton, forgotPasswordButton: UIButton, parent: AnyObject) {
+    public func addConstraintsToSignIn(_ signInButton: UIButton, view: UIView, parent: UIButton) {
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let VFL = ["signInButton": signInButton, "forgotPasswordButton": forgotPasswordButton]
-        let metrics = ["top": 65, "width": Int(UIScreen.main.bounds.width - 80), "height": 45]
-        
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[forgotPasswordButton]-top-[signInButton(height)]",
-                                                      options: [],
-                                                      metrics: metrics,
-                                                      views: VFL))
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[signInButton(width)]",
-                                                      options: [],
-                                                      metrics: metrics,
-                                                      views: VFL))
+        signInButton.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 64.0).isActive = true
+        signInButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40.0).isActive = true
+        signInButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -80.0).isActive = true
+        signInButton.heightAnchor.constraint(equalToConstant: 46.0).isActive = true
     }
     
-    public func addConstraintsToConnectWithLabel(label: UILabel, signInButton: UIButton, parent: AnyObject) {
-        label.translatesAutoresizingMaskIntoConstraints = false
+    public func addConstraintsToConnectWith(_ connectWithLabel: UILabel, view: UIView, parent: UIButton) {
+        connectWithLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let VFL = ["connectWithLabel": label, "signInButton": signInButton]
-        let metrics = ["top": 135, "width": Int(UIScreen.main.bounds.width - 80), "height": 13]
-        
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[signInButton]-top-[connectWithLabel(height)]",
-                                                             options: [],
-                                                      metrics: metrics,
-                                                      views: VFL))
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[connectWithLabel(width)]",
-                                                             options: [.alignAllCenterX],
-                                                      metrics: metrics,
-                                                      views: VFL))
-    }
-    
-    public func addConstraintsToSocialButtonsView(view: UIView, connectWithLabel: UILabel, parent: AnyObject) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        let VFL = ["connectWithLabel": connectWithLabel, "socialButtonsView": view]
-        let metrics = ["top": 20]
-        
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[connectWithLabel]-top-[socialButtonsView]", options: [.alignAllCenterX], metrics: metrics, views: VFL))
+        connectWithLabel.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 134.0).isActive = true
+        connectWithLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40.0).isActive = true
+        connectWithLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -80.0).isActive = true
+        connectWithLabel.heightAnchor.constraint(equalToConstant: 13.0).isActive = true
         
     }
 }

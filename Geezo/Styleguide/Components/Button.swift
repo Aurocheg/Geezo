@@ -31,9 +31,9 @@ struct Button {
 
 extension Button {
     public func createButton(type: ButtonType, background: Bool = true, border: Bool = false, text: String = "", image: UIImage? = nil) -> UIButton {
-        let colorStyle = ColorStyle()
-        
         let button = UIButton()
+
+        let colorStyle = ColorStyle()
         
         // If we need background for button
         if background {
@@ -56,7 +56,6 @@ extension Button {
         case .start:
             button.frame = CGRect(x: 0, y: 0, width: startButtonSizes.width, height: startButtonSizes.height)
             button.titleLabel?.font = UIFont(name: buttonFont + "-" + "Bold", size: 16.0)
-            button.titleLabel?.text = button.titleLabel?.text?.uppercased()
         case .okCancel:
             button.frame = CGRect(x: 0, y: 0, width: okCancelButtonsSizes.width, height: okCancelButtonsSizes.height)
         case .addNewPlaylist:
