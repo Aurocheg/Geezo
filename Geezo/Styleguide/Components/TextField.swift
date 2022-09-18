@@ -56,7 +56,6 @@ extension TextField {
             if let icon = UIImage(named: "showPasswordIcon") {
                 textField.setShowPasswordButton(icon: icon)
             }
-            
         case .name:
             if let icon = UIImage(named: "nameIcon") {
                 textField.setTextFieldIcon(icon: icon)

@@ -23,7 +23,7 @@ final class SignInController: UIViewController {
     }
     
     @objc func forgotTapped() {
-        print("forgot tapped")
+        navigationController?.pushViewController(ForgotPasswordController(), animated: true)
     }
     
     @objc func signInTapped() {
@@ -31,6 +31,6 @@ final class SignInController: UIViewController {
     }
     
     @objc func signUpTapped() {
-        print("sign up tapped")
+        navigationController?.pushViewController(SignUpController(), animated: true)
     }
 }

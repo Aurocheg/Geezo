@@ -1,5 +1,5 @@
 //
-//  SignUpController.swift
+//  ChangePasswordController.swift
 //  Geezo
 //
 //  Created by Aurocheg on 18.09.22.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class SignUpController: UIViewController {
+class ChangePasswordController: UIViewController {
     override func loadView() {
-        view = SignUpView()
+        view = ChangePasswordView()
     }
     
     override func viewDidLoad() {
@@ -19,5 +19,6 @@ final class SignUpController: UIViewController {
         if let navController = navigationController {
             backButtonItem.addBackArrowButton(navigationController: navController, navigationItem: navigationItem)
         }
+        
     }
 }

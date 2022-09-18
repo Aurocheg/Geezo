@@ -1,14 +1,13 @@
 //
-//  SignInExtensions.swift
+//  UILabel.swift
 //  Geezo
 //
-//  Created by Aurocheg on 16.09.22.
+//  Created by Aurocheg on 18.09.22.
 //
 
 import Foundation
 import UIKit
 
-// MARK: - UILabel Extension
 public extension UILabel {
     func drawLineOnBothSides(labelWidth: CGFloat, color: UIColor) {
         let lineHeight = CGFloat(1)

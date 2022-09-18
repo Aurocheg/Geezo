@@ -10,7 +10,6 @@
 		DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */; };
 		DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */; };
 		DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E828C8F19F00F416EF /* Assets.xcassets */; };
-		DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953428D4D9FB00375D48 /* SignInExtensions.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
@@ -32,6 +31,11 @@
 		DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */; };
 		DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */; };
 		DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */; };
+		DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1728D7605700C6139B /* ChangePasswordController.swift */; };
+		DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */; };
+		DE64BF1C28D7611100C6139B /* ChangePasswordConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */; };
+		DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */; };
+		DE64BF2128D78DFE00C6139B /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -46,7 +50,6 @@
 		DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE12F9E828C8F19F00F416EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE12F9ED28C8F19F00F416EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE27953428D4D9FB00375D48 /* SignInExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtensions.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -68,6 +71,11 @@
 		DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConstraints.swift; sourceTree = "<group>"; };
 		DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordExtensions.swift; sourceTree = "<group>"; };
+		DE64BF1728D7605700C6139B /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
+		DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordConstraints.swift; sourceTree = "<group>"; };
+		DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 		DE12F9DE28C8F19F00F416EF /* Geezo */ = {
 			isa = PBXGroup;
 			children = (
+				DE64BF1D28D78DB300C6139B /* Extensions */,
 				DE4DA55F28CDEB3D00E3DE1B /* Fonts */,
 				DE81759F28C8F45E0082FF16 /* Styleguide */,
 				DE12F9F328C8F1A900F416EF /* Model */,
@@ -130,6 +139,7 @@
 		DE12F9F428C8F1B500F416EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE64BF1628D7603C00C6139B /* ChangePassword */,
 				DE64BF0828D74D4100C6139B /* SignUp */,
 				DE27953328D4D9E200375D48 /* SignIn */,
 				DE64BF0F28D7559F00C6139B /* ForgotPassword */,
@@ -143,6 +153,7 @@
 				DE4DA57428CDEE5700E3DE1B /* SignInController.swift */,
 				DE64BF0628D74D2700C6139B /* SignUpController.swift */,
 				DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */,
+				DE64BF1728D7605700C6139B /* ChangePasswordController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */,
-				DE27953428D4D9FB00375D48 /* SignInExtensions.swift */,
 				DE27953628D4E08200375D48 /* SignInConstraints.swift */,
 			);
 			path = SignIn;
@@ -190,6 +200,24 @@
 				DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		DE64BF1628D7603C00C6139B /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */,
+				DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		DE64BF1D28D78DB300C6139B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */,
+				DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
@@ -292,10 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */,
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
 				DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */,
-				DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */,
+				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
 				DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */,
@@ -309,7 +338,10 @@
 				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
+				DE64BF2128D78DFE00C6139B /* UIBarButtonItemExtension.swift in Sources */,
 				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,
+				DE64BF1C28D7611100C6139B /* ChangePasswordConstraints.swift in Sources */,
+				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
 				DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
@@ -447,6 +479,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +507,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
