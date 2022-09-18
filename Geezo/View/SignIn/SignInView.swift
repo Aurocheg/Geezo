@@ -42,7 +42,7 @@ final class SignInView: UIView {
         TextField().createTF(placeholder: "Password", type: .password)
     }()
     
-    private var forgotPasswordButton: UIButton = {
+    public var forgotPasswordButton: UIButton = {
         let colorStyle = ColorStyle()
         let buttonComponent = Button()
         
@@ -55,7 +55,7 @@ final class SignInView: UIView {
         return button
     }()
     
-    private var signInButton: UIButton = {
+    public var signInButton: UIButton = {
         Button().createButton(type: .start, border: false, text: "SIGN IN")
     }()
     
@@ -100,7 +100,7 @@ final class SignInView: UIView {
         Label().createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "Don't have an account?")
     }()
     
-    private var signUpButton: UIButton = {
+    public var signUpButton: UIButton = {
         let buttonComponent = Button()
         let colorStyle = ColorStyle()
         
