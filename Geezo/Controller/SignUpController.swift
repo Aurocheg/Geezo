@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpController: UIViewController {
+final class SignUpController: UIViewController {
     override func loadView() {
         view = SignUpView()
     }

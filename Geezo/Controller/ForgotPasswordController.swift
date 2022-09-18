@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForgotPasswordController: UIViewController {
+final class ForgotPasswordController: UIViewController {
     override func loadView() {
         view = ForgotPasswordView()
     }

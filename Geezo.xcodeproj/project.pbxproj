@@ -30,6 +30,8 @@
 		DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */; };
 		DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */; };
 		DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */; };
+		DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */; };
+		DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -64,6 +66,8 @@
 		DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstraints.swift; sourceTree = "<group>"; };
 		DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConstraints.swift; sourceTree = "<group>"; };
+		DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordExtensions.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */,
+				DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */,
+				DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 			files = (
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
+				DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */,
 				DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
@@ -295,6 +302,7 @@
 				DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
+				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
 				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
