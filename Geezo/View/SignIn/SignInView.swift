@@ -31,25 +31,15 @@ final class SignInView: UIView {
     }()
     
     private var mainTitleLabel: UILabel = {
-        let label = Label()
-        
-        return label.createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
+        Label().createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
     }()
     
     private var emailTF: UITextField = {
-        let textFieldComponent = TextField()
-        
-        let tf = textFieldComponent.createTF(placeholder: "E-Mail", type: .email)
-        
-        return tf
+        TextField().createTF(placeholder: "E-Mail", type: .email)
     }()
     
     private var passwordTF: UITextField = {
-        let textFieldComponent = TextField()
-
-        let tf = textFieldComponent.createTF(placeholder: "Password", type: .password)
-        
-        return tf
+        TextField().createTF(placeholder: "Password", type: .password)
     }()
     
     private var forgotPasswordButton: UIButton = {
@@ -66,10 +56,7 @@ final class SignInView: UIView {
     }()
     
     private var signInButton: UIButton = {
-        let buttonComponent = Button()
-        let button = buttonComponent.createButton(type: .start, border: false, text: "SIGN IN")
-        
-        return button
+        Button().createButton(type: .start, border: false, text: "SIGN IN")
     }()
     
     private var connectWithLabel: UILabel = {
@@ -84,11 +71,46 @@ final class SignInView: UIView {
         return label
     }()
     
-    private let socialButtonsView = UIView()
-    private var signUpLabel = UILabel()
-    private var signUpButton = UIButton()
+    private let socialButtonsView: UIView = {
+        let view = UIView()
+        let socialIconsArray = [UIImage(named: "facebook"), UIImage(named: "google-plus"), UIImage(named: "twitter")]
+        var padding = 0
+        
+        view.frame = CGRect(x: 0, y: 0, width: 144, height: 40)
+        
+        for icon in socialIconsArray {
+            let button = UIButton()
+            button.setImage(icon, for: .normal)
+            button.frame = CGRect(x: padding, y: 0, width: 40, height: 40)
+            view.addSubview(button)
+            padding += Int(button.frame.width) + 12
+        }
+        
+        return view
+    }()
     
-    private let socialIconsArray = [UIImage(named: "facebook"), UIImage(named: "google-plus"), UIImage(named: "twitter")]
+    private var signUpView: UIView = {
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 199, height: 22)
+        
+        return view
+    }()
+    
+    private var signUpLabel: UILabel = {
+        Label().createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "Don't have an account?")
+    }()
+    
+    private var signUpButton: UIButton = {
+        let buttonComponent = Button()
+        let colorStyle = ColorStyle()
+        
+        let button = buttonComponent.createButton(type: .start, background: false, text: "Sign Up")
+        button.setTitleColor(colorStyle.brand2, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14.0)
+        
+        
+        return button
+    }()
     
     // MARK: - Init
     init() {
@@ -111,31 +133,22 @@ final class SignInView: UIView {
         addSubview(forgotPasswordButton)
         addSubview(signInButton)
         addSubview(connectWithLabel)
+        addSubview(socialButtonsView)
+        
+        signUpView.addSubview(signUpLabel)
+        signUpView.addSubview(signUpButton)
+        
+        addSubview(signUpView)
     }
     
-    // MARK: - Init Constraints
+    // MARK: - Init Constraints Method
     private func initConstraints() {
         signInConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self)
         signInConstraints.addConstraintsToTF(arrayTF: [emailTF, passwordTF], view: self, parent: mainTitleLabel)
         signInConstraints.addConstraintsToForgotPassword(forgotPasswordButton, view: self, parent: passwordTF)
         signInConstraints.addConstraintsToSignIn(signInButton, view: self, parent: forgotPasswordButton)
         signInConstraints.addConstraintsToConnectWith(connectWithLabel, view: self, parent: signInButton)
-    }
-    
-    // MARK: - UI Methods
-    private func createSocialButtons() {
-        var padding = 0
-        
-        socialButtonsView.frame = CGRect(x: 0, y: 0, width: 144, height: 40)
-        
-        for icon in socialIconsArray {
-            let button = UIButton()
-            button.setImage(icon, for: .normal)
-            button.frame = CGRect(x: padding, y: 0, width: 40, height: 40)
-            socialButtonsView.addSubview(button)
-            padding += Int(button.frame.width) + 12
-        }
-        
-        addSubview(socialButtonsView)
+        signInConstraints.addConstraintsToSocialButtons(socialButtonsView, view: self, parent: connectWithLabel)
+        signInConstraints.addConstraintsToSignUp(signUpView, view: self, parent: socialButtonsView, signUpLabel: signUpLabel, signUpButton: signUpButton)
     }
 }

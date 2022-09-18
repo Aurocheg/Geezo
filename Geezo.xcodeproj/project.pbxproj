@@ -25,6 +25,9 @@
 		DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */; };
 		DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */; };
 		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
+		DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0628D74D2700C6139B /* SignUpController.swift */; };
+		DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0928D74D5900C6139B /* SignUpView.swift */; };
+		DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -54,6 +57,9 @@
 		DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		DE64BF0628D74D2700C6139B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		DE64BF0928D74D5900C6139B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstraints.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 		DE12F9F428C8F1B500F416EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE64BF0828D74D4100C6139B /* SignUp */,
 				DE27953328D4D9E200375D48 /* SignIn */,
 			);
 			path = View;
@@ -125,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DE4DA57428CDEE5700E3DE1B /* SignInController.swift */,
+				DE64BF0628D74D2700C6139B /* SignUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +161,15 @@
 				DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DE64BF0828D74D4100C6139B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF0928D74D5900C6139B /* SignUpView.swift */,
+				DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
@@ -260,13 +277,16 @@
 				DE27953528D4D9FB00375D48 /* SignInExtensions.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
+				DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */,
 				DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
 				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
+				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,
+				DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
 			);

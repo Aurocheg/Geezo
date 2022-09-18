@@ -59,6 +59,39 @@ final class SignInConstraints: UIView {
         connectWithLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40.0).isActive = true
         connectWithLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -80.0).isActive = true
         connectWithLabel.heightAnchor.constraint(equalToConstant: 13.0).isActive = true
+    }
+    
+    public func addConstraintsToSocialButtons(_ socialButtonsView: UIView, view: UIView, parent: UILabel) {
+        socialButtonsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        socialButtonsView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 20.0).isActive = true
+        socialButtonsView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        socialButtonsView.widthAnchor.constraint(equalToConstant: 144.0).isActive = true
+        socialButtonsView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+    }
+    
+    public func addConstraintsToSignUp(_ signUpView: UIView, view: UIView, parent: UIView, signUpLabel: UILabel, signUpButton: UIButton) {
+        signUpView.translatesAutoresizingMaskIntoConstraints = false
+        signUpLabel.translatesAutoresizingMaskIntoConstraints = false
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // MARK: - Adding Constraints to Sign Up View
+        signUpView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 60.0).isActive = true
+        signUpView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        signUpView.widthAnchor.constraint(equalToConstant: 199.0).isActive = true
+        signUpView.heightAnchor.constraint(equalToConstant: 22.0).isActive = true
+        
+        // MARK: - Adding Constraints to Label
+        signUpLabel.leftAnchor.constraint(equalTo: signUpView.leftAnchor).isActive = true
+        signUpLabel.topAnchor.constraint(equalTo: signUpView.topAnchor).isActive = true
+        signUpLabel.widthAnchor.constraint(equalToConstant: 144.0).isActive = true
+        signUpLabel.heightAnchor.constraint(equalToConstant: 18.0).isActive = true
+        
+        // MARK: - Adding Constraints to Button
+        signUpButton.leftAnchor.constraint(equalTo: signUpLabel.rightAnchor, constant: 6.0).isActive = true
+        signUpButton.topAnchor.constraint(equalTo: signUpView.topAnchor, constant: -2.0).isActive = true
+        signUpButton.widthAnchor.constraint(equalToConstant: 49.0).isActive = true
+        signUpButton.heightAnchor.constraint(equalToConstant: 22.0).isActive = true
         
     }
 }
