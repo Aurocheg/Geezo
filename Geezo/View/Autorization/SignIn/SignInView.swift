@@ -9,6 +9,7 @@ import UIKit
 
 final class SignInView: UIView {
     // MARK: - Init Constraints
+    private var commonConstraints = CommonConstraints()
     private var signInConstraints = SignInConstraints()
     
     // MARK: - Init UI Elements
@@ -34,11 +35,11 @@ final class SignInView: UIView {
         Label().createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
     }()
     
-    private var emailTF: UITextField = {
+    public var emailTF: UITextField = {
         TextField().createTF(placeholder: "E-Mail", type: .email)
     }()
     
-    private var passwordTF: UITextField = {
+    public var passwordTF: UITextField = {
         TextField().createTF(placeholder: "Password", type: .password)
     }()
     
@@ -143,10 +144,10 @@ final class SignInView: UIView {
     
     // MARK: - Init Constraints Method
     private func initConstraints() {
-        signInConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self)
-        signInConstraints.addConstraintsToTF(arrayTF: [emailTF, passwordTF], view: self, parent: mainTitleLabel)
+        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, widthConstant: 128.0, heightConstant: 42.0)
+        commonConstraints.addConstraintsToTF(arrayTF: [emailTF,passwordTF], view: self, parent: mainTitleLabel)
         signInConstraints.addConstraintsToForgotPassword(forgotPasswordButton, view: self, parent: passwordTF)
-        signInConstraints.addConstraintsToSignIn(signInButton, view: self, parent: forgotPasswordButton)
+        commonConstraints.addConstraintsToButton(signInButton, view: self, parent: forgotPasswordButton)
         signInConstraints.addConstraintsToConnectWith(connectWithLabel, view: self, parent: signInButton)
         signInConstraints.addConstraintsToSocialButtons(socialButtonsView, view: self, parent: connectWithLabel)
         signInConstraints.addConstraintsToSignUp(signUpView, view: self, parent: socialButtonsView, signUpLabel: signUpLabel, signUpButton: signUpButton)

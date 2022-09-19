@@ -34,10 +34,18 @@ extension Button {
         let button = UIButton()
 
         let colorStyle = ColorStyle()
+                
+        button.layer.cornerRadius = 4
+        
+        button.setTitle(text, for: .normal)
+        button.setTitleColor(colorStyle.brand1, for: .normal)
+        button.titleLabel?.font = UIFont(name: buttonFont + "-" + "Regular", size: 14.0)
         
         // If we need background for button
         if background {
             button.backgroundColor = colorStyle.brand2
+        } else {
+            button.setTitleColor(colorStyle.brand2, for: .normal)
         }
         
         // If we need borders for button
@@ -45,12 +53,6 @@ extension Button {
             button.layer.borderColor = colorStyle.brand2.cgColor
             button.layer.borderWidth = 1
         }
-        
-        button.layer.cornerRadius = 4
-        
-        button.setTitle(text, for: .normal)
-        button.setTitleColor(colorStyle.brand1, for: .normal)
-        button.titleLabel?.font = UIFont(name: buttonFont + "-" + "Regular", size: 14.0)
         
         switch type {
         case .start:

@@ -10,6 +10,7 @@
 		DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */; };
 		DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */; };
 		DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E828C8F19F00F416EF /* Assets.xcassets */; };
+		DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE16570328D8792700CAE725 /* CommonConstraints.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
@@ -26,16 +27,21 @@
 		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
 		DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0628D74D2700C6139B /* SignUpController.swift */; };
 		DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0928D74D5900C6139B /* SignUpView.swift */; };
-		DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */; };
 		DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */; };
 		DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */; };
-		DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */; };
 		DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */; };
 		DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1728D7605700C6139B /* ChangePasswordController.swift */; };
 		DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */; };
-		DE64BF1C28D7611100C6139B /* ChangePasswordConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */; };
 		DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */; };
 		DE64BF2128D78DFE00C6139B /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */; };
+		DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2228D791E200C6139B /* VerifyPhoneController.swift */; };
+		DE64BF2628D7920600C6139B /* VerifyCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2528D7920600C6139B /* VerifyCodeController.swift */; };
+		DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2728D7921900C6139B /* VerifyDoneController.swift */; };
+		DE64BF2C28D7927200C6139B /* VerifyPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2B28D7927200C6139B /* VerifyPhoneView.swift */; };
+		DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF2F28D7928C00C6139B /* VerifyCodeView.swift */; };
+		DE64BF3228D7929900C6139B /* VerifyCodeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF3128D7929900C6139B /* VerifyCodeConstraints.swift */; };
+		DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF3328D792A400C6139B /* VerifyDoneView.swift */; };
+		DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF3528D792B600C6139B /* VerifyDoneConstraints.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -50,6 +56,7 @@
 		DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE12F9E828C8F19F00F416EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE12F9ED28C8F19F00F416EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE16570328D8792700CAE725 /* CommonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstraints.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -66,16 +73,21 @@
 		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE64BF0628D74D2700C6139B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DE64BF0928D74D5900C6139B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstraints.swift; sourceTree = "<group>"; };
 		DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConstraints.swift; sourceTree = "<group>"; };
 		DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordExtensions.swift; sourceTree = "<group>"; };
 		DE64BF1728D7605700C6139B /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordConstraints.swift; sourceTree = "<group>"; };
 		DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		DE64BF2228D791E200C6139B /* VerifyPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneController.swift; sourceTree = "<group>"; };
+		DE64BF2528D7920600C6139B /* VerifyCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeController.swift; sourceTree = "<group>"; };
+		DE64BF2728D7921900C6139B /* VerifyDoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDoneController.swift; sourceTree = "<group>"; };
+		DE64BF2B28D7927200C6139B /* VerifyPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneView.swift; sourceTree = "<group>"; };
+		DE64BF2F28D7928C00C6139B /* VerifyCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeView.swift; sourceTree = "<group>"; };
+		DE64BF3128D7929900C6139B /* VerifyCodeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeConstraints.swift; sourceTree = "<group>"; };
+		DE64BF3328D792A400C6139B /* VerifyDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDoneView.swift; sourceTree = "<group>"; };
+		DE64BF3528D792B600C6139B /* VerifyDoneConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDoneConstraints.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -139,10 +151,8 @@
 		DE12F9F428C8F1B500F416EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DE64BF1628D7603C00C6139B /* ChangePassword */,
-				DE64BF0828D74D4100C6139B /* SignUp */,
-				DE27953328D4D9E200375D48 /* SignIn */,
-				DE64BF0F28D7559F00C6139B /* ForgotPassword */,
+				DE16570628D8B13500CAE725 /* Autorization */,
+				DE16570328D8792700CAE725 /* CommonConstraints.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,12 +160,53 @@
 		DE12F9F528C8F1BA00F416EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DE16570728D8B17E00CAE725 /* Autorization */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE16570528D8B10D00CAE725 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF2A28D7922B00C6139B /* VerifyDone */,
+				DE64BF2928D7922100C6139B /* VerifyCode */,
+				DE64BF2428D791E800C6139B /* VerifyPhone */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
+		DE16570628D8B13500CAE725 /* Autorization */ = {
+			isa = PBXGroup;
+			children = (
+				DE27953328D4D9E200375D48 /* SignIn */,
+				DE64BF0828D74D4100C6139B /* SignUp */,
+				DE64BF0F28D7559F00C6139B /* ForgotPassword */,
+				DE64BF1628D7603C00C6139B /* ChangePassword */,
+				DE16570528D8B10D00CAE725 /* Verify */,
+			);
+			path = Autorization;
+			sourceTree = "<group>";
+		};
+		DE16570728D8B17E00CAE725 /* Autorization */ = {
+			isa = PBXGroup;
+			children = (
+				DE16570828D8B18C00CAE725 /* Verify */,
 				DE4DA57428CDEE5700E3DE1B /* SignInController.swift */,
 				DE64BF0628D74D2700C6139B /* SignUpController.swift */,
 				DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */,
 				DE64BF1728D7605700C6139B /* ChangePasswordController.swift */,
 			);
-			path = Controller;
+			path = Autorization;
+			sourceTree = "<group>";
+		};
+		DE16570828D8B18C00CAE725 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF2728D7921900C6139B /* VerifyDoneController.swift */,
+				DE64BF2528D7920600C6139B /* VerifyCodeController.swift */,
+				DE64BF2228D791E200C6139B /* VerifyPhoneController.swift */,
+			);
+			path = Verify;
 			sourceTree = "<group>";
 		};
 		DE27953328D4D9E200375D48 /* SignIn */ = {
@@ -187,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				DE64BF0928D74D5900C6139B /* SignUpView.swift */,
-				DE64BF0B28D74D9A00C6139B /* SignUpConstraints.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -196,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				DE64BF1028D755BB00C6139B /* ForgotPasswordView.swift */,
-				DE64BF1228D7570A00C6139B /* ForgotPasswordConstraints.swift */,
 				DE64BF1428D75D1100C6139B /* ForgotPasswordExtensions.swift */,
 			);
 			path = ForgotPassword;
@@ -206,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				DE64BF1928D7606A00C6139B /* ChangePasswordView.swift */,
-				DE64BF1B28D7611100C6139B /* ChangePasswordConstraints.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -218,6 +266,32 @@
 				DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DE64BF2428D791E800C6139B /* VerifyPhone */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF2B28D7927200C6139B /* VerifyPhoneView.swift */,
+			);
+			path = VerifyPhone;
+			sourceTree = "<group>";
+		};
+		DE64BF2928D7922100C6139B /* VerifyCode */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF2F28D7928C00C6139B /* VerifyCodeView.swift */,
+				DE64BF3128D7929900C6139B /* VerifyCodeConstraints.swift */,
+			);
+			path = VerifyCode;
+			sourceTree = "<group>";
+		};
+		DE64BF2A28D7922B00C6139B /* VerifyDone */ = {
+			isa = PBXGroup;
+			children = (
+				DE64BF3328D792A400C6139B /* VerifyDoneView.swift */,
+				DE64BF3528D792B600C6139B /* VerifyDoneConstraints.swift */,
+			);
+			path = VerifyDone;
 			sourceTree = "<group>";
 		};
 		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
@@ -321,9 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */,
+				DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */,
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
-				DE64BF1328D7570A00C6139B /* ForgotPasswordConstraints.swift in Sources */,
+				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
@@ -333,18 +408,23 @@
 				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
 				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
+				DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */,
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
 				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
 				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
 				DE64BF2128D78DFE00C6139B /* UIBarButtonItemExtension.swift in Sources */,
+				DE64BF2C28D7927200C6139B /* VerifyPhoneView.swift in Sources */,
+				DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */,
+				DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */,
 				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,
-				DE64BF1C28D7611100C6139B /* ChangePasswordConstraints.swift in Sources */,
+				DE64BF2628D7920600C6139B /* VerifyCodeController.swift in Sources */,
 				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
-				DE64BF0C28D74D9A00C6139B /* SignUpConstraints.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
+				DE64BF3228D7929900C6139B /* VerifyCodeConstraints.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
+				DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

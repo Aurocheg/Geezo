@@ -72,7 +72,7 @@ extension TextField {
         }
                 
         // MARK: Adding Line to TextField
-        textField.setUnderLine()
+        textField.setUnderLine(color: UIColor(red: 1, green: 1, blue: 1, alpha: 0.2))
         
         return textField
     }
@@ -113,10 +113,10 @@ extension UITextField {
         button.frame = CGRect(x: self.frame.width - 20, y: 0, width: 17, height: 17)
     }
     
-    func setUnderLine() {
+    func setUnderLine(color: UIColor) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 2)
-        bottomLine.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        bottomLine.backgroundColor = color.cgColor
         self.borderStyle = UITextField.BorderStyle.none
         self.layer.addSublayer(bottomLine)
     }

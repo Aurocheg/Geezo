@@ -9,7 +9,7 @@ import UIKit
 
 final class SignUpView: UIView {
     // MARK: - Init Constraints
-    private let signUpConstraints = SignUpConstraints()
+    private let commonConstraints = CommonConstraints()
     
     // MARK: - Init UI Elements
     private let backgroundImageView: UIImageView = {
@@ -68,8 +68,8 @@ final class SignUpView: UIView {
     
     // MARK: - Init Constraints Method
     private func initConstraints() {
-        signUpConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self)
-        signUpConstraints.addConstraintsToTF(arrayTF: [nameTF, emailTF, passwordTF], view: self, parent: mainTitleLabel)
-        signUpConstraints.addConstraintsToSignUp(signUpButton, view: self, parent: passwordTF)
+        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, widthConstant: 140.0, heightConstant: 42.0)
+        commonConstraints.addConstraintsToTF(arrayTF: [nameTF, emailTF, passwordTF], view: self, parent: mainTitleLabel)
+        commonConstraints.addConstraintsToButton(signUpButton, view: self, parent: passwordTF)
     }
 }

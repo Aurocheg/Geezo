@@ -17,17 +17,19 @@ final class SignInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: - Navigation
         signInView.forgotPasswordButton.addTarget(self, action: #selector(forgotTapped), for: .touchUpInside)
         signInView.signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
         signInView.signUpButton.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
     }
     
+    // MARK: - Buttons Taps
     @objc func forgotTapped() {
         navigationController?.pushViewController(ForgotPasswordController(), animated: true)
     }
     
     @objc func signInTapped() {
-        print("sign in tapped")
+        navigationController?.pushViewController(VerifyPhoneController(), animated: true)
     }
     
     @objc func signUpTapped() {
