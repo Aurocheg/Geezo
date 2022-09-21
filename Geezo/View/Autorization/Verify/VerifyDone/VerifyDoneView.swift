@@ -23,7 +23,7 @@ class VerifyDoneView: UIView {
         Label().createLabel(font: "Montserrat-Regular", size: 14.0, color: .white, text: "Please Verify your Phone.")
     }()
     
-    private let continueButton: UIButton = {
+    public let continueButton: UIButton = {
         Button().createButton(type: .start, background: true, border: true, text: "CONTINUE")
     }()
     

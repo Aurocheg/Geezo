@@ -8,8 +8,10 @@
 import UIKit
 
 class ChangePasswordController: UIViewController {
+    private let changePasswordView = ChangePasswordView()
+    
     override func loadView() {
-        view = ChangePasswordView()
+        view = changePasswordView
     }
     
     override func viewDidLoad() {
@@ -20,5 +22,13 @@ class ChangePasswordController: UIViewController {
             backButtonItem.addBackArrowButton(navigationController: navController, navigationItem: navigationItem)
         }
         
+        changePasswordView.changePasswordButton.addTarget(self, action: #selector(onChangePasswordButtonTapped), for: .touchUpInside)
+        
+    }
+    
+    @objc func onChangePasswordButtonTapped() {
+        let tabBarController = TabBarController()
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
     }
 }

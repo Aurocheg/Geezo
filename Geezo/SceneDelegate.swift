@@ -18,12 +18,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.windowScene = windowScene
         
-        let signInController = SignInController()
-        let navController = UINavigationController(rootViewController: signInController)
-        navController.navigationBar.tintColor = .white
+        if let _ = UserDefaults.standard.string(forKey: "username") {
+            let tabBarController = TabBarController()
+            window?.rootViewController = tabBarController
+        } else {
+            let signInController = SignInController()
+            let autorizationController = UINavigationController(rootViewController: signInController)
+            autorizationController.navigationBar.tintColor = .white
+            window?.rootViewController = autorizationController
+        }
         
-        window?.rootViewController = navController
         window?.makeKeyAndVisible()
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {return}
+        
+        window.rootViewController = vc
+        
+        UIView.transition(with: window,
+                          duration: 0.5,
+                          options: [.transitionFlipFromBottom],
+                          animations: nil,
+                          completion: nil)
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -53,7 +71,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 

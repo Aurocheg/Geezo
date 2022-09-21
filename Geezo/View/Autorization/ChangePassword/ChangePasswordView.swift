@@ -37,7 +37,7 @@ class ChangePasswordView: UIView {
         TextField().createTF(placeholder: "Confirm Password", type: .password)
     }()
     
-    private let changePasswordButton: UIButton = {
+    public let changePasswordButton: UIButton = {
         Button().createButton(type: .start, background: true, border: true, text: "CHANGE PASSWORD")
     }()
     

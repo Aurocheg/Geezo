@@ -40,7 +40,7 @@ final class SignUpView: UIView {
         TextField().createTF(placeholder: "Password", type: .password)
     }()
     
-    private let signUpButton: UIButton = {
+    public let signUpButton: UIButton = {
         Button().createButton(type: .start, border: false, text: "SIGN UP")
     }()
     

@@ -8,8 +8,10 @@
 import UIKit
 
 final class SignUpController: UIViewController {
+    private let signUpView = SignUpView()
+    
     override func loadView() {
-        view = SignUpView()
+        view = signUpView
     }
     
     override func viewDidLoad() {
@@ -19,5 +21,13 @@ final class SignUpController: UIViewController {
         if let navController = navigationController {
             backButtonItem.addBackArrowButton(navigationController: navController, navigationItem: navigationItem)
         }
+        
+        signUpView.signUpButton.addTarget(self, action: #selector(onSignUpButtonTapped), for: .touchUpInside)
     }
+    
+    @objc func onSignUpButtonTapped() {
+        let tabBarController = TabBarController()
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
+    }
+
 }

@@ -14,6 +14,14 @@ final class SignInController: UIViewController {
         view = signInView
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = UserDefaults.standard.string(forKey: "username") {
+            let tabBarController = TabBarController()
+            tabBarController.modalPresentationStyle = .currentContext
+            self.present(tabBarController, animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +29,7 @@ final class SignInController: UIViewController {
         signInView.forgotPasswordButton.addTarget(self, action: #selector(forgotTapped), for: .touchUpInside)
         signInView.signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
         signInView.signUpButton.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
+        
     }
     
     // MARK: - Buttons Taps

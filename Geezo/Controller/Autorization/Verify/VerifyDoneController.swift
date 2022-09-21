@@ -21,5 +21,13 @@ class VerifyDoneController: UIViewController {
         if let navController = navigationController {
             backButtonItem.addBackArrowButton(navigationController: navController, navigationItem: navigationItem)
         }
+        
+        verifyDoneView.continueButton.addTarget(self, action: #selector(onContinueButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func onContinueButtonTapped() {
+        let tabBarController = TabBarController()
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
     }
 }
