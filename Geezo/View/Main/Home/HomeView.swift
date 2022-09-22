@@ -15,11 +15,6 @@ final class HomeView: UIView {
     private let homeConstraints = HomeConstraints()
     
     // MARK: - Init UI Elements
-    private let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        return scrollView
-    }()
-    
     private let mainTitleLabel: UILabel = {
         Label().createLabel(font: "Roboto-Bold", size: 48.0, color: ColorStyle().neutral1, text: "Geezo")
     }()
@@ -40,12 +35,13 @@ final class HomeView: UIView {
         return button
     }()
     
-//    private let albumsCollectionView: UICollectionView = {
-//        let collectionViewCells = [UICollectionViewCell(), UICollectionViewCell()]
-//
-//
-//        UIScrollView
-//    }()
+    let albumImages: [UIImage] = [
+        UIImage(named: "albumCollectionCell1")!,
+        UIImage(named: "albumCollectionCell2")!,
+        UIImage(named: "albumCollectionCell3")!
+    ]
+    
+    lazy var albumCarousel = AlbumCarousel(frame: .zero, albumImages: albumImages)
     
     // MARK: - Init Method
     init() {
@@ -63,10 +59,12 @@ final class HomeView: UIView {
     private func initViews() {
         backgroundColor = colorStyle.brand1
         
+        // MARK: - Adding Subviews
         addSubview(mainTitleLabel)
         addSubview(searchButton)
         addSubview(newAlbumsLabel)
         addSubview(viewAllButton)
+        addSubview(albumCarousel)
     }
     
     // MARK: - Constraints Method
@@ -75,5 +73,6 @@ final class HomeView: UIView {
         homeConstraints.addConstraintsToSearch(searchButton, view: self)
         homeConstraints.addConstraintsToNewAlbums(newAlbumsLabel, view: self, parent: mainTitleLabel)
         homeConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
+        homeConstraints.addConstraintsToAlbums(albumCarousel, view: self, parent: newAlbumsLabel)
     }
 }

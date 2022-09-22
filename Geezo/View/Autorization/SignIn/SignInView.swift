@@ -13,12 +13,6 @@ final class SignInView: UIView {
     private var signInConstraints = SignInConstraints()
     
     // MARK: - Init UI Elements
-    private var scrollView: UIScrollView = {
-        let view = UIScrollView()
-        
-        return view
-    }()
-    
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.frame = UIScreen.main.bounds

@@ -11,6 +11,10 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTabBarControllerSettings()
+    }
+    
+    private func setTabBarControllerSettings() {
         UITabBar.appearance().tintColor = ColorStyle().brand2
         
         var controllers = [UIViewController]()

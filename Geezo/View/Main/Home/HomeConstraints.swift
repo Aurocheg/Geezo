@@ -17,7 +17,7 @@ class HomeConstraints: UIView {
         searchButton.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
     }
     
-    public func addConstraintsToNewAlbums(_ newAlbumsLabel: UILabel, view: UIView, parent: UILabel) {
+    public func addConstraintsToNewAlbums(_ newAlbumsLabel: UILabel, view: UIView, parent: AnyObject) {
         newAlbumsLabel.translatesAutoresizingMaskIntoConstraints = false
         
         newAlbumsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24.0).isActive = true
@@ -33,5 +33,14 @@ class HomeConstraints: UIView {
         viewAllButton.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 56.0).isActive = true
         viewAllButton.widthAnchor.constraint(equalToConstant: 43.0).isActive = true
         viewAllButton.heightAnchor.constraint(equalToConstant: 14.0).isActive = true
+    }
+    
+    public func addConstraintsToAlbums(_ albumsView: UIView, view: UIView, parent: AnyObject) {
+        albumsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        albumsView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 20.0).isActive = true
+        albumsView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        albumsView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        albumsView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
     }
 }

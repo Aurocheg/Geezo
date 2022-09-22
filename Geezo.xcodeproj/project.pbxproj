@@ -43,6 +43,8 @@
 		DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF3328D792A400C6139B /* VerifyDoneView.swift */; };
 		DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF3528D792B600C6139B /* VerifyDoneConstraints.swift */; };
 		DE683F0428D9AD2000CCB5BA /* HomeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */; };
+		DE74D7FC28DCE4BA0046A878 /* AlbumCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */; };
+		DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */; };
 		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
 		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
 		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
@@ -99,6 +101,8 @@
 		DE64BF3328D792A400C6139B /* VerifyDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDoneView.swift; sourceTree = "<group>"; };
 		DE64BF3528D792B600C6139B /* VerifyDoneConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDoneConstraints.swift; sourceTree = "<group>"; };
 		DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstraints.swift; sourceTree = "<group>"; };
+		DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCarouselLayout.swift; sourceTree = "<group>"; };
+		DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCarousel.swift; sourceTree = "<group>"; };
 		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
 		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -319,10 +323,20 @@
 		DE683F0228D9AD0B00CCB5BA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE74D7FA28DCE4950046A878 /* AlbumsCarousel */,
 				DED4C34A28D8DD6F00207AB8 /* HomeView.swift */,
 				DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DE74D7FA28DCE4950046A878 /* AlbumsCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */,
+				DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */,
+			);
+			path = AlbumsCarousel;
 			sourceTree = "<group>";
 		};
 		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
@@ -449,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */,
+				DE74D7FC28DCE4BA0046A878 /* AlbumCarouselLayout.swift in Sources */,
 				DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */,
 				DED4C34328D8C78000207AB8 /* HomeController.swift in Sources */,
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
@@ -457,6 +472,7 @@
 				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
 				DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
+				DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */,
 				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
 				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
 				DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */,
