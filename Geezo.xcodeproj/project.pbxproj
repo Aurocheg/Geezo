@@ -15,6 +15,12 @@
 		DE1B7B6028E4AC9800C35B72 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B5F28E4AC9800C35B72 /* UISwitchExtension.swift */; };
 		DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6128E4ACFF00C35B72 /* UITextFieldExtension.swift */; };
 		DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6328E4B3DD00C35B72 /* ColorStyle.swift */; };
+		DE1B7B6628E4B4F200C35B72 /* ExploreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6528E4B4F200C35B72 /* ExploreModel.swift */; };
+		DE1B7B6828E4B54F00C35B72 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6728E4B54F00C35B72 /* HomeModel.swift */; };
+		DE1B7B6A28E4B57400C35B72 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6928E4B57400C35B72 /* RadioModel.swift */; };
+		DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */; };
+		DE1B7B6F28E4B69E00C35B72 /* ExploreTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */; };
+		DE1B7B7528E4C3D800C35B72 /* ExploreTracksCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
@@ -72,6 +78,12 @@
 		DE1B7B5F28E4AC9800C35B72 /* UISwitchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtension.swift; sourceTree = "<group>"; };
 		DE1B7B6128E4ACFF00C35B72 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		DE1B7B6328E4B3DD00C35B72 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
+		DE1B7B6528E4B4F200C35B72 /* ExploreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreModel.swift; sourceTree = "<group>"; };
+		DE1B7B6728E4B54F00C35B72 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		DE1B7B6928E4B57400C35B72 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
+		DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTracksCell.swift; sourceTree = "<group>"; };
+		DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTracksCellConstraints.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -234,6 +246,15 @@
 			path = Verify;
 			sourceTree = "<group>";
 		};
+		DE1B7B7328E4C3C100C35B72 /* ExploreTracks */ = {
+			isa = PBXGroup;
+			children = (
+				DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */,
+				DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */,
+			);
+			path = ExploreTracks;
+			sourceTree = "<group>";
+		};
 		DE27953328D4D9E200375D48 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +366,7 @@
 		DE74D80128DE2DE40046A878 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B7B7328E4C3C100C35B72 /* ExploreTracks */,
 				DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */,
 				DE74D80628DE32570046A878 /* ExploreConstraints.swift */,
 			);
@@ -388,6 +410,7 @@
 		DE83A8C528DED9FD00A1CF4E /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B7B6528E4B4F200C35B72 /* ExploreModel.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -427,6 +450,7 @@
 		DE83A8D128DF1D4E00A1CF4E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B7B6728E4B54F00C35B72 /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -434,6 +458,7 @@
 		DE83A8D228DF1D5B00A1CF4E /* Radio */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B7B6928E4B57400C35B72 /* RadioModel.swift */,
 			);
 			path = Radio;
 			sourceTree = "<group>";
@@ -441,6 +466,7 @@
 		DE83A8D328DF1D6000A1CF4E /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -555,11 +581,13 @@
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DED4C35128D8DD9100207AB8 /* AccountView.swift in Sources */,
 				DE1B7B5E28E4ABB100C35B72 /* UIButtonExtension.swift in Sources */,
+				DE1B7B7528E4C3D800C35B72 /* ExploreTracksCellConstraints.swift in Sources */,
 				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
 				DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */,
 				DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */,
 				DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
+				DE1B7B6F28E4B69E00C35B72 /* ExploreTracksCell.swift in Sources */,
 				DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */,
 				DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */,
 				DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */,
@@ -571,6 +599,8 @@
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
+				DE1B7B6828E4B54F00C35B72 /* HomeModel.swift in Sources */,
+				DE1B7B6628E4B4F200C35B72 /* ExploreModel.swift in Sources */,
 				DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */,
 				DED4C34B28D8DD6F00207AB8 /* HomeView.swift in Sources */,
 				DE64BF2128D78DFE00C6139B /* UIBarButtonItemExtension.swift in Sources */,
@@ -578,11 +608,13 @@
 				DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */,
 				DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */,
 				DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */,
+				DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */,
 				DED4C34728D8C7A300207AB8 /* RadioController.swift in Sources */,
 				DE64BF2628D7920600C6139B /* VerifyCodeController.swift in Sources */,
 				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
 				DE64BF3228D7929900C6139B /* VerifyCodeConstraints.swift in Sources */,
+				DE1B7B6A28E4B57400C35B72 /* RadioModel.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
 				DED4C34D28D8DD7D00207AB8 /* ExploreView.swift in Sources */,
 				DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */,

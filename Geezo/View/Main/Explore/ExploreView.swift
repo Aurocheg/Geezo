@@ -39,6 +39,17 @@ final class ExploreView: UIView {
         button.setTitleColor(ColorStyle().neutral1, for: .normal)
         return button
     }()
+    
+    public let tableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.backgroundColor = UIColor(red: 0.114, green: 0.096, blue: 0.217, alpha: 1)
+        tableView.separatorStyle = .none
+        tableView.isScrollEnabled = false
+        
+        return tableView
+    }()
+    
         
     // MARK: - Init Method
     init() {
@@ -60,6 +71,7 @@ final class ExploreView: UIView {
         addSubview(searchButton)
         addSubview(geezoChartLabel)
         addSubview(viewAllButton)
+        addSubview(tableView)
     }
     
     // MARK: - Constraints Method
@@ -71,5 +83,8 @@ final class ExploreView: UIView {
         mainConstraints.addConstraintsToSearch(searchButton, view: self)
         mainConstraints.addConstraintsToLeftSubtitle(geezoChartLabel, view: self, parent: mainTitleLabel, width: 123.0, height: 26.0)
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
+        
+        // MARK: - Explore Constraints
+        exploreConstraints.addConstraintsToTable(tableView, view: self, parent: geezoChartLabel)
     }
 }

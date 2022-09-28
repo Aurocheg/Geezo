@@ -19,13 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.windowScene = windowScene
         
         if let _ = UserDefaults.standard.string(forKey: "username") {
-            let tabBarController = TabBarController()
-            window?.rootViewController = tabBarController
-        } else {
             let signInController = SignInController()
             let autorizationController = UINavigationController(rootViewController: signInController)
             autorizationController.navigationBar.tintColor = .white
             window?.rootViewController = autorizationController
+        } else {
+            let tabBarController = TabBarController()
+            window?.rootViewController = tabBarController
         }
         
         window?.makeKeyAndVisible()
