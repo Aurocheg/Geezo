@@ -2,7 +2,7 @@
 //  ColorStyle.swift
 //  Geezo
 //
-//  Created by Aurocheg on 7.09.22.
+//  Created by Aurocheg on 28.09.22.
 //
 
 import Foundation

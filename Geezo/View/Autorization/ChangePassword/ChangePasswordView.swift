@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangePasswordView: UIView {
+final class ChangePasswordView: UIView {
     private let colorStyle = ColorStyle()
     
     // MARK: - Init Constraints
@@ -15,30 +15,32 @@ class ChangePasswordView: UIView {
     
     // MARK: - Init UI Elements
     private let mainTitleLabel: UILabel = {
-        Label().createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Forgot Password?")
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Forgot Password?")
     }()
     
     private let textLabel: UILabel = {
-        let labelComponent = Label()
-        let label = labelComponent.createLabel(font: "Montserrat-Regular", size: 12.0, color: ColorStyle().neutral2, text: "")
+        var label = UILabel()
         
+        label = label.createLabel(font: "Montserrat-Regular", size: 12.0, color: ColorStyle().neutral2, text: "")
         label.numberOfLines = 3
-        
         label.attributedText = NSAttributedString(string: "If you need help resetting your password, we can help by sending you a link to reset it.").withLineSpacing(14)
-        
         return label
     }()
     
     private let passwordTF: UITextField = {
-        TextField().createTF(placeholder: "Password", type: .password)
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Password", type: .password)
     }()
     
     private let confirmPasswordTF: UITextField = {
-        TextField().createTF(placeholder: "Confirm Password", type: .password)
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Confirm Password", type: .password)
     }()
     
     public let changePasswordButton: UIButton = {
-        Button().createButton(type: .start, background: true, border: true, text: "CHANGE PASSWORD")
+        let TF = UIButton()
+        return TF.createButton(type: .start, background: true, border: true, text: "CHANGE PASSWORD")
     }()
     
     // MARK: - Init

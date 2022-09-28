@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerifyCodeView: UIView {
+final class VerifyCodeView: UIView {
     let colorStyle = ColorStyle()
 
     // MARK: - Init Constraints
@@ -15,19 +15,20 @@ class VerifyCodeView: UIView {
     private let verifyCodeConstraints = VerifyCodeConstraints()
     
     // MARK: - Init UI Elements
-    private var mainTitleLabel: UILabel = {
-        let labelComponent = Label()
-        let label = labelComponent.createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Verify Phone Number")
-        label.numberOfLines = 2
+    private let mainTitleLabel: UILabel = {
+        var label = UILabel()
         
+        label = label.createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Verify Phone Number")
+        label.numberOfLines = 2
         return label
     }()
     
-    public var continueButton: UIButton = {
-        Button().createButton(type: .start, background: true, border: true, text: "CONTINUE")
+    public let continueButton: UIButton = {
+        let button = UIButton()
+        return button.createButton(type: .start, background: true, border: true, text: "CONTINUE")
     }()
     
-    public var codeView: UIView = {
+    public let codeView: UIView = {
         let view = UIView()
         let numberViews = [UIView(), UIView(), UIView(), UIView()]
         var padding = 0
@@ -43,8 +44,9 @@ class VerifyCodeView: UIView {
         return view
     }()
     
-    public var resentCodeButton: UIButton = {
-        Button().createButton(type: .start, background: false, border: false, text: "Resent Code")
+    public let resentCodeButton: UIButton = {
+        let button = UIButton()
+        return button.createButton(type: .start, background: false, border: false, text: "Resent Code")
     }()
 
     // MARK: - Init Method

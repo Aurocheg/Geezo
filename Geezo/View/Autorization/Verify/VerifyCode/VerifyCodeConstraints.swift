@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerifyCodeConstraints: UIView {
+final class VerifyCodeConstraints: UIView {
     public func addConstraintsToCode(_ codeView: UIView, view: UIView, parent: UILabel) {
         codeView.translatesAutoresizingMaskIntoConstraints = false
         

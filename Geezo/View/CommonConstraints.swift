@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommonConstraints: UIView {
+final class CommonConstraints: UIView {
     public func addConstraintsToMainTitle(_ mainTitleLabel: UILabel, view: UIView, leftConstant: CGFloat = 40.0, topConstant: CGFloat = 105.0, widthConstant: CGFloat, heightConstant: CGFloat) {
         mainTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         

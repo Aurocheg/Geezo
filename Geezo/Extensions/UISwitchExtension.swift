@@ -1,19 +1,18 @@
 //
-//  Switch.swift
+//  UISwitchExtension.swift
 //  Geezo
 //
-//  Created by Aurocheg on 9.09.22.
+//  Created by Aurocheg on 28.09.22.
 //
 
 import Foundation
 import UIKit
 
-struct Switch {
-    static let switchSizes = (width: 32, height: 17)
-}
+// MARK: - Switch Settings
+let switchSizes = (width: 32, height: 17)
 
-extension Switch {
-    public static func createSwitch() -> UISwitch {
+extension UISwitch {
+    func createSwitch() -> UISwitch {
         let colorStyle = ColorStyle()
         
         let mySwitch = UISwitch()

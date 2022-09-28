@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerifyDoneView: UIView {
+final class VerifyDoneView: UIView {
     private let colorStyle = ColorStyle()
     
     // MARK: - Init Constraints
@@ -16,15 +16,18 @@ class VerifyDoneView: UIView {
     
     // MARK: - Init UI Elements
     private let mainTitleLabel: UILabel = {
-        Label().createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Almost Done!")
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 28.0, color: .white, text: "Almost Done!")
     }()
     
     private let textLabel: UILabel = {
-        Label().createLabel(font: "Montserrat-Regular", size: 14.0, color: .white, text: "Please Verify your Phone.")
+        let label = UILabel()
+        return label.createLabel(font: "Montserrat-Regular", size: 14.0, color: .white, text: "Please Verify your Phone.")
     }()
     
     public let continueButton: UIButton = {
-        Button().createButton(type: .start, background: true, border: true, text: "CONTINUE")
+        let button = UIButton()
+        return button.createButton(type: .start, background: true, border: true, text: "CONTINUE")
     }()
     
     // MARK: - Init Method

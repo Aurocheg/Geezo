@@ -8,10 +8,13 @@
 import UIKit
 
 class AlbumCarouselLayout: UICollectionViewFlowLayout {
+    // MARK: - Variables
+    private let itemSpacing: CGFloat = 3
+    
     override init() {
         super.init()
         
-        minimumLineSpacing = 0
+        minimumLineSpacing = 100
         minimumInteritemSpacing = 0
         scrollDirection = .horizontal
         sectionInset = .zero
@@ -23,8 +26,8 @@ class AlbumCarouselLayout: UICollectionViewFlowLayout {
     
     override func prepare() {
         super.prepare()
-        if let collectionView = collectionView {
-            itemSize = collectionView.frame.size
+        if let _ = collectionView {
+            itemSize = CGSize(width: 148, height: 139)
         }
     }
     

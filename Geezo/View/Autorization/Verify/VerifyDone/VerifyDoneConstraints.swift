@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerifyDoneConstraints: UIView {
+final class VerifyDoneConstraints: UIView {
     public func addConstraintsToMainTitle(_ mainTitleLabel: UILabel, view: UIView) {
         mainTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         

@@ -1,35 +1,34 @@
 //
-//  TextField.swift
+//  UITextFieldExtension.swift
 //  Geezo
 //
-//  Created by Aurocheg on 11.09.22.
+//  Created by Aurocheg on 28.09.22.
 //
 
 import Foundation
 import UIKit
 
-enum TextFieldType {
+// MARK: - Text Field Settings
+let textFieldFont = "Montserrat-Regular"
+let textFieldSizes = (width: Int(UIScreen.main.bounds.width - 80), height: 35)
+let textFieldPlaceholderColor = UIColor(red: 0.624, green: 0.624, blue: 0.624, alpha: 1)
+let textFieldTextColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
+let textFieldLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 0.2)
+let textFieldActiveLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
+
+// MARK: - TextField Enum
+enum UITextFieldType {
     case email
     case password
     case name
     case phone
 }
 
-struct TextField {
-    public let textFieldFont = "Montserrat-Regular"
-    public let textFieldSizes = (width: Int(UIScreen.main.bounds.width - 80), height: 35)
-    public let textFieldPlaceholderColor = UIColor(red: 0.624, green: 0.624, blue: 0.624, alpha: 1)
-    public let textFieldTextColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
-    public let textFieldLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 0.2)
-    public let textFieldActiveLineColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
-}
-
-// MARK: TextField Component Extension
-extension TextField {
-    public func createTF(placeholder: String = "", type: TextFieldType) -> UITextField {
+extension UITextField {
+    func createTF(placeholder: String = "", type: UITextFieldType) -> UITextField {
         let textField = textFieldInit()
         
-        // MARK: Adding custom placeholder color
+        // MARK: - Adding custom placeholder color
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: textFieldPlaceholderColor])
@@ -37,6 +36,7 @@ extension TextField {
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         
+        // MARK: - TextField Type
         switch type {
         case .email:
             if let icon = UIImage(named: "emailIcon") {
@@ -77,7 +77,6 @@ extension TextField {
         return textField
     }
     
-    // MARK: Aditional Methods
     private func textFieldInit() -> UITextField {
         let textField = UITextField()
         textField.frame = CGRect(x: 0, y: 0,
@@ -88,9 +87,7 @@ extension TextField {
         
         return textField
     }
-}
-
-extension UITextField {
+    
     func setTextFieldIcon(icon: UIImage) {
         let imageView = UIImageView()
         imageView.image = icon

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RadioController: UIViewController {
+final class RadioController: UIViewController {
     private let radioView = RadioView()
     
     override func loadView() {

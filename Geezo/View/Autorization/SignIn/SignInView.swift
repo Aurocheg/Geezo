@@ -9,8 +9,8 @@ import UIKit
 
 final class SignInView: UIView {
     // MARK: - Init Constraints
-    private var commonConstraints = CommonConstraints()
-    private var signInConstraints = SignInConstraints()
+    private let commonConstraints = CommonConstraints()
+    private let signInConstraints = SignInConstraints()
     
     // MARK: - Init UI Elements
     private let backgroundImageView: UIImageView = {
@@ -25,24 +25,26 @@ final class SignInView: UIView {
         return imageView
     }()
     
-    private var mainTitleLabel: UILabel = {
-        Label().createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
+    private let mainTitleLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN IN")
     }()
     
-    public var emailTF: UITextField = {
-        TextField().createTF(placeholder: "E-Mail", type: .email)
+    public let emailTF: UITextField = {
+        let TF = UITextField()
+        return TF.createTF(placeholder: "E-Mail", type: .email)
     }()
     
-    public var passwordTF: UITextField = {
-        TextField().createTF(placeholder: "Password", type: .password)
+    public let passwordTF: UITextField = {
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Password", type: .password)
     }()
     
-    public var forgotPasswordButton: UIButton = {
+    public let forgotPasswordButton: UIButton = {
         let colorStyle = ColorStyle()
-        let buttonComponent = Button()
+        var button = UIButton()
         
-        let button = buttonComponent.createButton(type: .label, background: false, text: "Forgot password ?")
-        
+        button = button.createButton(type: .label, background: false, text: "Forgot password ?")
         button.frame = CGRect(x: 0, y: 0, width: 130, height: 22)
         button.setTitleColor(colorStyle.neutral1, for: .normal)
         button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 14.0)
@@ -50,16 +52,16 @@ final class SignInView: UIView {
         return button
     }()
     
-    public var signInButton: UIButton = {
-        Button().createButton(type: .start, border: false, text: "SIGN IN")
+    public let signInButton: UIButton = {
+        let button = UIButton()
+        return button.createButton(type: .start, border: false, text: "SIGN IN")
     }()
     
-    private var connectWithLabel: UILabel = {
+    private let connectWithLabel: UILabel = {
         let colorStyle = ColorStyle()
-        let labelComponent = Label()
+        var label = UILabel()
         
-        let label = labelComponent.createLabel(font: "Montserrat-Bold", size: 11.0, color: colorStyle.neutral2, text: "Connect with")
-
+        label = label.createLabel(font: "Montserrat-Bold", size: 11.0, color: colorStyle.neutral2, text: "Connect with")
         label.textAlignment = .center
         label.drawLineOnBothSides(labelWidth: label.frame.width, color: .lightGray)
         
@@ -84,7 +86,7 @@ final class SignInView: UIView {
         return view
     }()
     
-    private var signUpView: UIView = {
+    private let signUpView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 199, height: 22)
         
@@ -92,17 +94,17 @@ final class SignInView: UIView {
     }()
     
     private var signUpLabel: UILabel = {
-        Label().createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "Don't have an account?")
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "Don't have an account?")
     }()
     
     public var signUpButton: UIButton = {
-        let buttonComponent = Button()
+        var button = UIButton()
         let colorStyle = ColorStyle()
         
-        let button = buttonComponent.createButton(type: .start, background: false, text: "Sign Up")
+        button = button.createButton(type: .start, background: false, text: "Sign Up")
         button.setTitleColor(colorStyle.brand2, for: .normal)
         button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14.0)
-        
         
         return button
     }()

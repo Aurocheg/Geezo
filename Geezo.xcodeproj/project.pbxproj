@@ -11,6 +11,10 @@
 		DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */; };
 		DE12F9E928C8F19F00F416EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F9E828C8F19F00F416EF /* Assets.xcassets */; };
 		DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE16570328D8792700CAE725 /* CommonConstraints.swift */; };
+		DE1B7B5E28E4ABB100C35B72 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B5D28E4ABB100C35B72 /* UIButtonExtension.swift */; };
+		DE1B7B6028E4AC9800C35B72 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B5F28E4AC9800C35B72 /* UISwitchExtension.swift */; };
+		DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6128E4ACFF00C35B72 /* UITextFieldExtension.swift */; };
+		DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6328E4B3DD00C35B72 /* ColorStyle.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
@@ -22,9 +26,7 @@
 		DE4DA57328CDEE1500E3DE1B /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */; };
 		DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57428CDEE5700E3DE1B /* SignInController.swift */; };
 		DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */; };
-		DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */; };
 		DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */; };
-		DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE510F1428CDDCFC002D9D18 /* TextField.swift */; };
 		DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0628D74D2700C6139B /* SignUpController.swift */; };
 		DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0928D74D5900C6139B /* SignUpView.swift */; };
 		DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */; };
@@ -45,12 +47,9 @@
 		DE683F0428D9AD2000CCB5BA /* HomeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */; };
 		DE74D7FC28DCE4BA0046A878 /* AlbumCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */; };
 		DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */; };
-		DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A028C8F46D0082FF16 /* ColorStyle.swift */; };
-		DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */; };
-		DE8175B228CBC62A0082FF16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B128CBC62A0082FF16 /* Player.swift */; };
-		DE8175B428CBC6990082FF16 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B328CBC6990082FF16 /* Button.swift */; };
-		DE8175B628CBC7190082FF16 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175B528CBC7190082FF16 /* Switch.swift */; };
-		DE8175BE28CCA7200082FF16 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8175BD28CCA7200082FF16 /* Label.swift */; };
+		DE74D80028DD84E30046A878 /* AlbumConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D7FF28DD84E30046A878 /* AlbumConstraints.swift */; };
+		DE74D80328DE2E6A0046A878 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80228DE2E6A0046A878 /* MainConstraints.swift */; };
+		DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80628DE32570046A878 /* ExploreConstraints.swift */; };
 		DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C33C28D8C5F200207AB8 /* TabBarController.swift */; };
 		DED4C34328D8C78000207AB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34228D8C78000207AB8 /* HomeController.swift */; };
 		DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34428D8C79A00207AB8 /* ExploreController.swift */; };
@@ -69,6 +68,10 @@
 		DE12F9E828C8F19F00F416EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE12F9ED28C8F19F00F416EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE16570328D8792700CAE725 /* CommonConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstraints.swift; sourceTree = "<group>"; };
+		DE1B7B5D28E4ABB100C35B72 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		DE1B7B5F28E4AC9800C35B72 /* UISwitchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtension.swift; sourceTree = "<group>"; };
+		DE1B7B6128E4ACFF00C35B72 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		DE1B7B6328E4B3DD00C35B72 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -80,9 +83,7 @@
 		DE4DA57228CDEE1500E3DE1B /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		DE4DA57428CDEE5700E3DE1B /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		DE510F1428CDDCFC002D9D18 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE64BF0628D74D2700C6139B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DE64BF0928D74D5900C6139B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
@@ -103,12 +104,9 @@
 		DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstraints.swift; sourceTree = "<group>"; };
 		DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCarouselLayout.swift; sourceTree = "<group>"; };
 		DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCarousel.swift; sourceTree = "<group>"; };
-		DE8175A028C8F46D0082FF16 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
-		DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyle.swift; sourceTree = "<group>"; };
-		DE8175B128CBC62A0082FF16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		DE8175B328CBC6990082FF16 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		DE8175B528CBC7190082FF16 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
-		DE8175BD28CCA7200082FF16 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		DE74D7FF28DD84E30046A878 /* AlbumConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumConstraints.swift; sourceTree = "<group>"; };
+		DE74D80228DE2E6A0046A878 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
+		DE74D80628DE32570046A878 /* ExploreConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreConstraints.swift; sourceTree = "<group>"; };
 		DED4C33C28D8C5F200207AB8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DED4C34228D8C78000207AB8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DED4C34428D8C79A00207AB8 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
@@ -152,12 +150,12 @@
 			children = (
 				DE64BF1D28D78DB300C6139B /* Extensions */,
 				DE4DA55F28CDEB3D00E3DE1B /* Fonts */,
-				DE81759F28C8F45E0082FF16 /* Styleguide */,
 				DE12F9F328C8F1A900F416EF /* Model */,
 				DE12F9F428C8F1B500F416EF /* View */,
 				DE12F9F528C8F1BA00F416EF /* Controller */,
 				DE12F9DF28C8F19F00F416EF /* AppDelegate.swift */,
 				DE12F9E128C8F19F00F416EF /* SceneDelegate.swift */,
+				DE1B7B6328E4B3DD00C35B72 /* ColorStyle.swift */,
 				DE12F9ED28C8F19F00F416EF /* Info.plist */,
 				DE12F9E828C8F19F00F416EF /* Assets.xcassets */,
 			);
@@ -167,7 +165,8 @@
 		DE12F9F328C8F1A900F416EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE4DA57828CDEE9900E3DE1B /* SignInModel.swift */,
+				DE83A8C328DED9D800A1CF4E /* Main */,
+				DE83A8C428DED9E900A1CF4E /* Autorization */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +289,9 @@
 			children = (
 				DE64BF1E28D78DCD00C6139B /* UILabelExtension.swift */,
 				DE64BF2028D78DFE00C6139B /* UIBarButtonItemExtension.swift */,
+				DE1B7B5D28E4ABB100C35B72 /* UIButtonExtension.swift */,
+				DE1B7B5F28E4AC9800C35B72 /* UISwitchExtension.swift */,
+				DE1B7B6128E4ACFF00C35B72 /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,40 +337,122 @@
 			children = (
 				DE74D7FB28DCE4BA0046A878 /* AlbumCarouselLayout.swift */,
 				DE74D7FD28DCE53F0046A878 /* AlbumCarousel.swift */,
+				DE74D7FF28DD84E30046A878 /* AlbumConstraints.swift */,
 			);
 			path = AlbumsCarousel;
 			sourceTree = "<group>";
 		};
-		DE81759F28C8F45E0082FF16 /* Styleguide */ = {
+		DE74D80128DE2DE40046A878 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				DE8175B028CBC5F70082FF16 /* Components */,
-				DE8175A028C8F46D0082FF16 /* ColorStyle.swift */,
-				DE8175A428C8FCBF0082FF16 /* EffectsStyle.swift */,
+				DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */,
+				DE74D80628DE32570046A878 /* ExploreConstraints.swift */,
 			);
-			path = Styleguide;
+			path = Explore;
 			sourceTree = "<group>";
 		};
-		DE8175B028CBC5F70082FF16 /* Components */ = {
+		DE74D80428DE2E6F0046A878 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
-				DE8175B128CBC62A0082FF16 /* Player.swift */,
-				DE8175B328CBC6990082FF16 /* Button.swift */,
-				DE8175B528CBC7190082FF16 /* Switch.swift */,
-				DE8175BD28CCA7200082FF16 /* Label.swift */,
-				DE510F1428CDDCFC002D9D18 /* TextField.swift */,
+				DED4C34E28D8DD8600207AB8 /* RadioView.swift */,
 			);
-			path = Components;
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		DE74D80528DE2E7D0046A878 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DED4C35028D8DD9100207AB8 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		DE83A8C328DED9D800A1CF4E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DE83A8D128DF1D4E00A1CF4E /* Home */,
+				DE83A8C528DED9FD00A1CF4E /* Explore */,
+				DE83A8D228DF1D5B00A1CF4E /* Radio */,
+				DE83A8D328DF1D6000A1CF4E /* Account */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DE83A8C428DED9E900A1CF4E /* Autorization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Autorization;
+			sourceTree = "<group>";
+		};
+		DE83A8C528DED9FD00A1CF4E /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DE83A8CD28DF1CE300A1CF4E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DED4C34228D8C78000207AB8 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DE83A8CE28DF1CED00A1CF4E /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				DED4C34428D8C79A00207AB8 /* ExploreController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DE83A8CF28DF1CFA00A1CF4E /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				DED4C34628D8C7A300207AB8 /* RadioController.swift */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		DE83A8D028DF1D0D00A1CF4E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DED4C34828D8C7AF00207AB8 /* AccountController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		DE83A8D128DF1D4E00A1CF4E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DE83A8D228DF1D5B00A1CF4E /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		DE83A8D328DF1D6000A1CF4E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		DED4C34028D8C73300207AB8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DE83A8CD28DF1CE300A1CF4E /* Home */,
+				DE83A8CE28DF1CED00A1CF4E /* Explore */,
+				DE83A8CF28DF1CFA00A1CF4E /* Radio */,
+				DE83A8D028DF1D0D00A1CF4E /* Account */,
 				DED4C33C28D8C5F200207AB8 /* TabBarController.swift */,
-				DED4C34228D8C78000207AB8 /* HomeController.swift */,
-				DED4C34428D8C79A00207AB8 /* ExploreController.swift */,
-				DED4C34628D8C7A300207AB8 /* RadioController.swift */,
-				DED4C34828D8C7AF00207AB8 /* AccountController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -377,9 +461,10 @@
 			isa = PBXGroup;
 			children = (
 				DE683F0228D9AD0B00CCB5BA /* Home */,
-				DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */,
-				DED4C34E28D8DD8600207AB8 /* RadioView.swift */,
-				DED4C35028D8DD9100207AB8 /* AccountView.swift */,
+				DE74D80128DE2DE40046A878 /* Explore */,
+				DE74D80428DE2E6F0046A878 /* Radio */,
+				DE74D80528DE2E7D0046A878 /* Account */,
+				DE74D80228DE2E6A0046A878 /* MainConstraints.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -463,29 +548,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */,
+				DE1B7B6028E4AC9800C35B72 /* UISwitchExtension.swift in Sources */,
 				DE74D7FC28DCE4BA0046A878 /* AlbumCarouselLayout.swift in Sources */,
 				DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */,
 				DED4C34328D8C78000207AB8 /* HomeController.swift in Sources */,
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DED4C35128D8DD9100207AB8 /* AccountView.swift in Sources */,
-				DE8175B228CBC62A0082FF16 /* Player.swift in Sources */,
+				DE1B7B5E28E4ABB100C35B72 /* UIButtonExtension.swift in Sources */,
 				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
+				DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */,
+				DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */,
 				DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
 				DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */,
-				DE8175A528C8FCBF0082FF16 /* EffectsStyle.swift in Sources */,
-				DE8175A128C8F46D0082FF16 /* ColorStyle.swift in Sources */,
 				DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */,
-				DE510F1528CDDCFC002D9D18 /* TextField.swift in Sources */,
+				DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
-				DE4DA57928CDEE9900E3DE1B /* SignInModel.swift in Sources */,
 				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DED4C34928D8C7AF00207AB8 /* AccountController.swift in Sources */,
 				DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */,
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
-				DE8175BE28CCA7200082FF16 /* Label.swift in Sources */,
-				DE8175B428CBC6990082FF16 /* Button.swift in Sources */,
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
 				DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */,
@@ -495,7 +578,6 @@
 				DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */,
 				DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */,
 				DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */,
-				DE8175B628CBC7190082FF16 /* Switch.swift in Sources */,
 				DED4C34728D8C7A300207AB8 /* RadioController.swift in Sources */,
 				DE64BF2628D7920600C6139B /* VerifyCodeController.swift in Sources */,
 				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
@@ -504,6 +586,8 @@
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
 				DED4C34D28D8DD7D00207AB8 /* ExploreView.swift in Sources */,
 				DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */,
+				DE74D80328DE2E6A0046A878 /* MainConstraints.swift in Sources */,
+				DE74D80028DD84E30046A878 /* AlbumConstraints.swift in Sources */,
 				DE683F0428D9AD2000CCB5BA /* HomeConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

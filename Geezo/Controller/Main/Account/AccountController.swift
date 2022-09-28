@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  AccountController.swift
 //  Geezo
 //
 //  Created by Aurocheg on 19.09.22.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class HomeController: UIViewController {
-    private let homeView = HomeView()
+final class AccountController: UIViewController {
+    private let accountView = AccountView()
     
     override func loadView() {
-        view = homeView
+        view = accountView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

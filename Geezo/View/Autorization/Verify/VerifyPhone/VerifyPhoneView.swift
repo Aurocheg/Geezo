@@ -7,27 +7,29 @@
 
 import UIKit
 
-class VerifyPhoneView: UIView {
+final class VerifyPhoneView: UIView {
     private let colorStyle = ColorStyle()
     
     // MARK: - Init Constraints
-    private var commonConstraints = CommonConstraints()
+    private let commonConstraints = CommonConstraints()
     
     // MARK: - Init UI Elements
-    private var mainTitleLabel: UILabel = {
-        let labelComponent = Label()
-        let label = labelComponent.createLabel(font: "Roboto Bold", size: 28.0, color: .white, text: "To continue enter your phone number")
+    private let mainTitleLabel: UILabel = {
+        var label = UILabel()
+        
+        label = label.createLabel(font: "Roboto Bold", size: 28.0, color: .white, text: "To continue enter your phone number")
         label.numberOfLines = 0
-
         return label
     }()
     
-    private var phoneTF: UITextField = {
-        TextField().createTF(placeholder: "Phone", type: .phone)
+    private let phoneTF: UITextField = {
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Phone", type: .phone)
     }()
     
-    public var continueButton: UIButton = {
-        Button().createButton(type: .start, background: true, border: true, text: "CONTINUE")
+    public let continueButton: UIButton = {
+        let button = UIButton()
+        return button.createButton(type: .start, background: true, border: true, text: "CONTINUE")
     }()
     
     // MARK: - Init

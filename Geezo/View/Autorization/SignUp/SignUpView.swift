@@ -25,23 +25,28 @@ final class SignUpView: UIView {
     }()
     
     private let mainTitleLabel: UILabel = {
-        Label().createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN UP")
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 36.0, color: .white, text: "SIGN UP")
     }()
     
     private let nameTF: UITextField = {
-        TextField().createTF(placeholder: "Name", type: .name)
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Name", type: .name)
     }()
     
     private let emailTF: UITextField = {
-        TextField().createTF(placeholder: "E-Mail", type: .email)
+        let TF = UITextField()
+        return TF.createTF(placeholder: "E-Mail", type: .email)
     }()
     
     private let passwordTF: UITextField = {
-        TextField().createTF(placeholder: "Password", type: .password)
+        let TF = UITextField()
+        return TF.createTF(placeholder: "Password", type: .password)
     }()
     
     public let signUpButton: UIButton = {
-        Button().createButton(type: .start, border: false, text: "SIGN UP")
+        let button = UIButton()
+        return button.createButton(type: .start, border: false, text: "SIGN UP")
     }()
     
     // MARK: - Init

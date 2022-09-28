@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  ExploreView.swift
 //  Geezo
 //
 //  Created by Aurocheg on 19.09.22.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-final class HomeView: UIView {
+final class ExploreView: UIView {
     private let colorStyle = ColorStyle()
     
     // MARK: - Init Constraints
     private let commonConstraints = CommonConstraints()
     private let mainConstraints = MainConstraints()
-    private let homeConstraints = HomeConstraints()
+    private let exploreConstraints = ExploreConstraints()
     
     // MARK: - Init UI Elements
     private let mainTitleLabel: UILabel = {
         let label = UILabel()
-        return label.createLabel(font: "Roboto-Bold", size: 48.0, color: ColorStyle().neutral1, text: "Geezo")
+        return label.createLabel(font: "Roboto-Bold", size: 48.0, color: ColorStyle().neutral1, text: "Explore")
     }()
     
     private let searchButton: UIButton = {
@@ -26,9 +26,9 @@ final class HomeView: UIView {
         return button.createButton(type: .social, background: false, border: false, image: UIImage(named: "search"))
     }()
     
-    private let newAlbumsLabel: UILabel = {
+    private let geezoChartLabel: UILabel = {
         let label = UILabel()
-        return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "New Albums")
+        return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Geezo Chart")
     }()
     
     private let viewAllButton: UIButton = {
@@ -39,16 +39,7 @@ final class HomeView: UIView {
         button.setTitleColor(ColorStyle().neutral1, for: .normal)
         return button
     }()
-    
-    lazy var albumCarousel = AlbumCarousel(frame: .zero, albumImages: albumImages)
-    
-    // MARK: - Variables
-    let albumImages = [
-        UIImage(named: "albumCollectionCell1")!,
-        UIImage(named: "albumCollectionCell2")!,
-        UIImage(named: "albumCollectionCell3")!
-    ]
-    
+        
     // MARK: - Init Method
     init() {
         super.init(frame: .zero)
@@ -65,20 +56,20 @@ final class HomeView: UIView {
     private func initViews() {
         backgroundColor = colorStyle.brand1
         
-        // MARK: - Adding Subviews
         addSubview(mainTitleLabel)
         addSubview(searchButton)
-        addSubview(newAlbumsLabel)
+        addSubview(geezoChartLabel)
         addSubview(viewAllButton)
-        addSubview(albumCarousel)
     }
     
     // MARK: - Constraints Method
     private func initConstraints() {
-        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, leftConstant: 24.0, topConstant: 64.0, widthConstant: 140.0, heightConstant: 56.0)
+        // MARK: - Common Constraints
+        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, leftConstant: 24.0, topConstant: 64.0, widthConstant: 162.0, heightConstant: 56.0)
+        
+        // MARK: - Main Constraints
         mainConstraints.addConstraintsToSearch(searchButton, view: self)
-        mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: self, parent: mainTitleLabel, width: 125.0, height: 66.0)
+        mainConstraints.addConstraintsToLeftSubtitle(geezoChartLabel, view: self, parent: mainTitleLabel, width: 123.0, height: 26.0)
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
-        homeConstraints.addConstraintsToAlbums(albumCarousel, view: self, parent: newAlbumsLabel)
     }
 }
