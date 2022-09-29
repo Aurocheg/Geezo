@@ -22,8 +22,8 @@ final class MainConstraints: UIView {
         
         subtitleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24.0).isActive = true
         subtitleLabel.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 32.0).isActive = true
-        subtitleLabel.widthAnchor.constraint(equalToConstant: 125.0).isActive = true
-        subtitleLabel.heightAnchor.constraint(equalToConstant: 26.0).isActive = true
+        subtitleLabel.widthAnchor.constraint(equalToConstant: width).isActive = true
+        subtitleLabel.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
     public func addConstraintsToViewAll(_ viewAllButton: UIButton, view: UIView, parent: UIButton) {

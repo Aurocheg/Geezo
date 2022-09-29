@@ -65,6 +65,8 @@
 		DED4C34D28D8DD7D00207AB8 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */; };
 		DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34E28D8DD8600207AB8 /* RadioView.swift */; };
 		DED4C35128D8DD9100207AB8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C35028D8DD9100207AB8 /* AccountView.swift */; };
+		DED6C00428E5960D00F9243F /* TrendingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6C00328E5960D00F9243F /* TrendingCollectionCell.swift */; };
+		DED6C00628E5C32F00F9243F /* TrendingCollectionConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6C00528E5C32F00F9243F /* TrendingCollectionConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +130,8 @@
 		DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		DED4C34E28D8DD8600207AB8 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		DED4C35028D8DD9100207AB8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		DED6C00328E5960D00F9243F /* TrendingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionCell.swift; sourceTree = "<group>"; };
+		DED6C00528E5C32F00F9243F /* TrendingCollectionConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,13 +250,13 @@
 			path = Verify;
 			sourceTree = "<group>";
 		};
-		DE1B7B7328E4C3C100C35B72 /* ExploreTracks */ = {
+		DE1B7B7328E4C3C100C35B72 /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
 				DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */,
 				DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */,
 			);
-			path = ExploreTracks;
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 		DE27953328D4D9E200375D48 /* SignIn */ = {
@@ -366,7 +370,8 @@
 		DE74D80128DE2DE40046A878 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				DE1B7B7328E4C3C100C35B72 /* ExploreTracks */,
+				DED6C00228E595EA00F9243F /* Trendings */,
+				DE1B7B7328E4C3C100C35B72 /* Tracks */,
 				DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */,
 				DE74D80628DE32570046A878 /* ExploreConstraints.swift */,
 			);
@@ -495,6 +500,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DED6C00228E595EA00F9243F /* Trendings */ = {
+			isa = PBXGroup;
+			children = (
+				DED6C00328E5960D00F9243F /* TrendingCollectionCell.swift */,
+				DED6C00528E5C32F00F9243F /* TrendingCollectionConstraints.swift */,
+			);
+			path = Trendings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,6 +614,7 @@
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
 				DE1B7B6828E4B54F00C35B72 /* HomeModel.swift in Sources */,
+				DED6C00628E5C32F00F9243F /* TrendingCollectionConstraints.swift in Sources */,
 				DE1B7B6628E4B4F200C35B72 /* ExploreModel.swift in Sources */,
 				DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */,
 				DED4C34B28D8DD6F00207AB8 /* HomeView.swift in Sources */,
@@ -615,6 +630,7 @@
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
 				DE64BF3228D7929900C6139B /* VerifyCodeConstraints.swift in Sources */,
 				DE1B7B6A28E4B57400C35B72 /* RadioModel.swift in Sources */,
+				DED6C00428E5960D00F9243F /* TrendingCollectionCell.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,
 				DED4C34D28D8DD7D00207AB8 /* ExploreView.swift in Sources */,
 				DE64BF3628D792B600C6139B /* VerifyDoneConstraints.swift in Sources */,

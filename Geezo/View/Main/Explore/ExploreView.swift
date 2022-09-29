@@ -50,6 +50,19 @@ final class ExploreView: UIView {
         return tableView
     }()
     
+    private let topTrendingLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Top Trending")
+    }()
+    
+    public var trendingCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        
+        collectionView.isPagingEnabled = true
+        collectionView.isScrollEnabled = true
+        
+        return collectionView
+    }()
         
     // MARK: - Init Method
     init() {
@@ -72,6 +85,8 @@ final class ExploreView: UIView {
         addSubview(geezoChartLabel)
         addSubview(viewAllButton)
         addSubview(tableView)
+        addSubview(topTrendingLabel)
+        addSubview(trendingCollectionView)
     }
     
     // MARK: - Constraints Method
@@ -83,8 +98,10 @@ final class ExploreView: UIView {
         mainConstraints.addConstraintsToSearch(searchButton, view: self)
         mainConstraints.addConstraintsToLeftSubtitle(geezoChartLabel, view: self, parent: mainTitleLabel, width: 123.0, height: 26.0)
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
+        mainConstraints.addConstraintsToLeftSubtitle(topTrendingLabel, view: self, parent: tableView, width: 130.0, height: 26.0)
         
         // MARK: - Explore Constraints
         exploreConstraints.addConstraintsToTable(tableView, view: self, parent: geezoChartLabel)
+        exploreConstraints.addConstraintsToCollection(trendingCollectionView, view: self, parent: topTrendingLabel)
     }
 }
