@@ -13,14 +13,15 @@ final class ExploreController: UIViewController {
     private let tracks = ExploreTracksModel.getTracks()
     private let trendings = ExploreTrendingsModel.getTrendings()
     
-    private var tableView: UITableView {
+    private var exploreTracksTableView: UITableView {
         get {
-            exploreView.tableView
+            exploreView.exploreTracksTableView
         }
     }
-    private var collectionView: UICollectionView {
+    
+    private var exploreTrendingCollectionView: UICollectionView {
         get {
-            exploreView.trendingCollectionView
+            exploreView.exploreTrendingsCollectionView
         }
     }
 
@@ -32,28 +33,25 @@ final class ExploreController: UIViewController {
         super.viewDidLoad()
         
         // MARK: - Connections
-        tableView.dataSource = self
-        collectionView.dataSource = self
+        exploreTracksTableView.dataSource = self
+        exploreTracksTableView.delegate = self
+        
+        exploreTrendingCollectionView.dataSource = self
         
         // MARK: - Register
-        tableView.register(ExploreTracksCell.self, forCellReuseIdentifier: "ExploreTracksCell")
-        collectionView.register(ExploreTrendingCollectionCell.self, forCellWithReuseIdentifier: "ExploreTrendingCell")
+        exploreTracksTableView.register(ExploreTracksCell.self, forCellReuseIdentifier: "ExploreTracksCell")
+        exploreTrendingCollectionView.register(ExploreTrendingsCell.self, forCellWithReuseIdentifier: "ExploreTrendingsCell")
     }
 }
 
 // MARK: - UITableView Extensions
-extension ExploreController: UITableViewDelegate {
-    
-}
-
-
 extension ExploreController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ExploreTracksCell", for: indexPath) as! ExploreTracksCell
+        let cell = exploreTracksTableView.dequeueReusableCell(withIdentifier: "ExploreTracksCell", for: indexPath) as! ExploreTracksCell
     
         cell.trackPositionLabel.text = "0\(indexPath.row + 1)"
         cell.trackTitleLabel.text = tracks[indexPath.row].trackTitle
@@ -62,9 +60,11 @@ extension ExploreController: UITableViewDataSource {
         
         return cell
     }
-    
+}
+
+extension ExploreController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        CGFloat(65)
+        60
     }
 }
 
@@ -75,12 +75,14 @@ extension ExploreController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreTrendingCell", for: indexPath) as! ExploreTrendingCollectionCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreTrendingsCell", for: indexPath) as? ExploreTrendingsCell else {
+            return UICollectionViewCell()
+        }
         
         cell.trendingImageView.image = UIImage(named: trendings[indexPath.row].trendingImage)
-        cell.trendingTitleLabel.text = trendings[indexPath.row].trendingTitle
         cell.trendingSignerLabel.text = trendings[indexPath.row].trendingSigner
-                
+        cell.trendingTitleLabel.text = trendings[indexPath.row].trendingTitle
+        
         return cell
     }
 }

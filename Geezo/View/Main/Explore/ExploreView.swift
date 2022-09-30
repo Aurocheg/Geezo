@@ -40,7 +40,7 @@ final class ExploreView: UIView {
         return button
     }()
     
-    public let tableView: UITableView = {
+    public let exploreTracksTableView: UITableView = {
         let tableView = UITableView()
         
         tableView.backgroundColor = UIColor(red: 0.114, green: 0.096, blue: 0.217, alpha: 1)
@@ -55,15 +55,20 @@ final class ExploreView: UIView {
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Top Trending")
     }()
     
-    public var trendingCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+    public let exploreTrendingsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let itemWidth = UIScreen.main.bounds.width
         
-        collectionView.isPagingEnabled = true
-        collectionView.isScrollEnabled = true
+        layout.itemSize = CGSize(width: itemWidth - 48.0, height: 200)
+        layout.scrollDirection = .horizontal
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
         
         return collectionView
     }()
-        
+    
     // MARK: - Init Method
     init() {
         super.init(frame: .zero)
@@ -84,9 +89,9 @@ final class ExploreView: UIView {
         addSubview(searchButton)
         addSubview(geezoChartLabel)
         addSubview(viewAllButton)
-        addSubview(tableView)
+        addSubview(exploreTracksTableView)
         addSubview(topTrendingLabel)
-        addSubview(trendingCollectionView)
+        addSubview(exploreTrendingsCollectionView)
     }
     
     // MARK: - Constraints Method
@@ -98,10 +103,10 @@ final class ExploreView: UIView {
         mainConstraints.addConstraintsToSearch(searchButton, view: self)
         mainConstraints.addConstraintsToLeftSubtitle(geezoChartLabel, view: self, parent: mainTitleLabel, width: 123.0, height: 26.0)
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
-        mainConstraints.addConstraintsToLeftSubtitle(topTrendingLabel, view: self, parent: tableView, width: 130.0, height: 26.0)
+        mainConstraints.addConstraintsToLeftSubtitle(topTrendingLabel, view: self, parent: exploreTracksTableView, width: 130.0, height: 26.0)
         
         // MARK: - Explore Constraints
-        exploreConstraints.addConstraintsToTable(tableView, view: self, parent: geezoChartLabel)
-        exploreConstraints.addConstraintsToCollection(trendingCollectionView, view: self, parent: topTrendingLabel)
+        exploreConstraints.addConstraintsToTable(exploreTracksTableView, view: self, parent: geezoChartLabel)
+        exploreConstraints.addConstraintsToCollection(exploreTrendingsCollectionView, view: self, parent: topTrendingLabel)
     }
 }
