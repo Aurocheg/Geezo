@@ -76,9 +76,9 @@ final class HomeView: UIView {
     // MARK: - Constraints Method
     private func initConstraints() {
         commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, leftConstant: 24.0, topConstant: 64.0, widthConstant: 140.0, heightConstant: 56.0)
-        mainConstraints.addConstraintsToSearch(searchButton, view: self)
-        mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: self, parent: mainTitleLabel, width: 125.0, height: 66.0)
-        mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton)
+        mainConstraints.addConstraintsToSearch(searchButton, view: self, topConstant: 84.0, rightConstant: -24.0)
+        mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: self, parent: mainTitleLabel, width: 125.0, height: 66.0, topConstant: 32.0)
+        mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton, topConstant: 56.0)
         homeConstraints.addConstraintsToAlbums(albumCarousel, view: self, parent: newAlbumsLabel)
     }
 }

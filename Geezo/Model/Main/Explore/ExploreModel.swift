@@ -18,6 +18,7 @@ struct ExploreTracksModel: ExploreTracksProtocol {
     var trackImage: String
     var trackTitle: String
     var trackSigner: String
+    static let cellID = "ExploreTracksCell"
     
     static func getTracks() -> [ExploreTracksModel] {
         let tracks = [
@@ -42,13 +43,38 @@ struct ExploreTrendingsModel: ExploreTrendingsProtocol {
     var trendingImage: String
     var trendingTitle: String
     var trendingSigner: String
+    static let cellID = "ExploreTrendingsCell"
     
     static func getTrendings() -> [ExploreTrendingsModel] {
         let trendings = [
             ExploreTrendingsModel(trendingImage: "trendingCollectionImage", trendingTitle: "Do it", trendingSigner: "Milian Luu"),
-            ExploreTrendingsModel(trendingImage: "trendingCollectionImage", trendingTitle: "Do it", trendingSigner: "Milian Luu"),
+            ExploreTrendingsModel(trendingImage: "trendingCollectionImage2", trendingTitle: "Do it", trendingSigner: "Milian Luu"),
             ExploreTrendingsModel(trendingImage: "trendingCollectionImage", trendingTitle: "Do it", trendingSigner: "Milian Luu"),
         ]
         return trendings
+    }
+}
+
+// MARK: - Topics
+protocol ExploreTopicsProtocol {
+    var topicImage: String { get set }
+    var topicTitle: String { get set }
+}
+
+struct ExploreTopicsModel: ExploreTopicsProtocol {
+    var topicImage: String
+    var topicTitle: String
+    static let cellID = "ExploreTopicsCell"
+    
+    static func getTopics() -> [ExploreTopicsModel] {
+        let topics = [
+            ExploreTopicsModel(topicImage: "exploreTopic1", topicTitle: "Hip - Hop"),
+            ExploreTopicsModel(topicImage: "exploreTopic2", topicTitle: "POP"),
+            ExploreTopicsModel(topicImage: "exploreTopic3", topicTitle: "Jazz"),
+            ExploreTopicsModel(topicImage: "exploreTopic4", topicTitle: "Dance"),
+            ExploreTopicsModel(topicImage: "exploreTopic5", topicTitle: "Ballad"),
+            ExploreTopicsModel(topicImage: "exploreTopic6", topicTitle: "R&B"),
+        ]
+        return topics
     }
 }

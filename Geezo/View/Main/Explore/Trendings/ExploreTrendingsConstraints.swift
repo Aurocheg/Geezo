@@ -29,7 +29,7 @@ final class ExploreTrendingsConstraints: UIView {
     public func addConstraintsToTrendingTitle(_ trendingTitleLabel: UILabel, tredingSignerLabel: UILabel, view: UICollectionViewCell) {
         trendingTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        trendingTitleLabel.bottomAnchor.constraint(equalTo: tredingSignerLabel.topAnchor, constant: 4.0).isActive = true
+        trendingTitleLabel.bottomAnchor.constraint(equalTo: tredingSignerLabel.topAnchor, constant: -4.0).isActive = true
         trendingTitleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16.0).isActive = true
         trendingTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32.0).isActive = true
         trendingTitleLabel.heightAnchor.constraint(equalToConstant: 19.0).isActive = true

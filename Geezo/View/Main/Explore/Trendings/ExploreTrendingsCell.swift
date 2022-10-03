@@ -28,9 +28,10 @@ final class ExploreTrendingsCell: UICollectionViewCell {
         return label.createLabel(font: "Roboto-Regular", size: 12.0, color: .white, text: "")
     }()
     
+    // MARK: - Init Method
     override init(frame: CGRect) {
         super.init(frame: frame)
-                        
+                                
         initViews()
         initConstraints()
     }
@@ -40,7 +41,7 @@ final class ExploreTrendingsCell: UICollectionViewCell {
     }
     
     // MARK: - Init Views Method
-    private func initViews() {        
+    private func initViews() {
         addSubview(trendingImageView)
         addSubview(trendingTitleLabel)
         addSubview(trendingSignerLabel)

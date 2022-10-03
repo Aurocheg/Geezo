@@ -67,6 +67,8 @@
 		DED4C34D28D8DD7D00207AB8 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */; };
 		DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34E28D8DD8600207AB8 /* RadioView.swift */; };
 		DED4C35128D8DD9100207AB8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C35028D8DD9100207AB8 /* AccountView.swift */; };
+		DEFF500E28EB4DCC006F8910 /* ExploreTopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF500D28EB4DCC006F8910 /* ExploreTopicsCell.swift */; };
+		DEFF501028EB4EEF006F8910 /* ExploreTopicsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF500F28EB4EEF006F8910 /* ExploreTopicsConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,8 @@
 		DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		DED4C34E28D8DD8600207AB8 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		DED4C35028D8DD9100207AB8 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		DEFF500D28EB4DCC006F8910 /* ExploreTopicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTopicsCell.swift; sourceTree = "<group>"; };
+		DEFF500F28EB4EEF006F8910 /* ExploreTopicsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTopicsConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,8 +374,9 @@
 		DE74D80128DE2DE40046A878 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				DED6C00228E595EA00F9243F /* Trendings */,
 				DE1B7B7328E4C3C100C35B72 /* Tracks */,
+				DED6C00228E595EA00F9243F /* Trendings */,
+				DEFF500C28EB4DA5006F8910 /* Topics */,
 				DED4C34C28D8DD7D00207AB8 /* ExploreView.swift */,
 				DE74D80628DE32570046A878 /* ExploreConstraints.swift */,
 			);
@@ -509,6 +514,15 @@
 			path = Trendings;
 			sourceTree = "<group>";
 		};
+		DEFF500C28EB4DA5006F8910 /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF500D28EB4DCC006F8910 /* ExploreTopicsCell.swift */,
+				DEFF500F28EB4EEF006F8910 /* ExploreTopicsConstraints.swift */,
+			);
+			path = Topics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,6 +614,7 @@
 				DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */,
 				DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */,
 				DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */,
+				DEFF500E28EB4DCC006F8910 /* ExploreTopicsCell.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
 				DE1B7B6F28E4B69E00C35B72 /* ExploreTracksCell.swift in Sources */,
 				DE74D7FE28DCE53F0046A878 /* AlbumCarousel.swift in Sources */,
@@ -612,6 +627,7 @@
 				DED4C34928D8C7AF00207AB8 /* AccountController.swift in Sources */,
 				DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */,
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
+				DEFF501028EB4EEF006F8910 /* ExploreTopicsConstraints.swift in Sources */,
 				DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */,
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
 				DE1B7B6828E4B54F00C35B72 /* HomeModel.swift in Sources */,

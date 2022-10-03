@@ -10,21 +10,34 @@ import UIKit
 final class ExploreController: UIViewController {
     private let exploreView = ExploreView()
     
+    // MARK: - Model Init
     private let tracks = ExploreTracksModel.getTracks()
-    private let trendings = ExploreTrendingsModel.getTrendings()
+    private let tracksCellID = ExploreTracksModel.cellID
     
-    private var exploreTracksTableView: UITableView {
-        get {
-            exploreView.exploreTracksTableView
-        }
+    private let trendings = ExploreTrendingsModel.getTrendings()
+    private let trendingsCellID = ExploreTrendingsModel.cellID
+    
+    private let topics = ExploreTopicsModel.getTopics()
+    private let topicsCellID = ExploreTopicsModel.cellID
+    
+    // MARK: - Elements Init
+    private var tracksTableView: UITableView {
+        exploreView.tracksTableView
     }
     
-    private var exploreTrendingCollectionView: UICollectionView {
-        get {
-            exploreView.exploreTrendingsCollectionView
-        }
+    private var trendingsCollectionView: UICollectionView {
+        exploreView.trendingsCollectionView
+    }
+    
+    private var trendingsPageControls: UIPageControl {
+        exploreView.trendingsPageControls
+    }
+    
+    private var topicsCollectionView: UICollectionView {
+        exploreView.topicsCollectionView
     }
 
+    // MARK: - View Life Cycle
     override func loadView() {
         view = exploreView
     }
@@ -32,26 +45,31 @@ final class ExploreController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: - Connections
-        exploreTracksTableView.dataSource = self
-        exploreTracksTableView.delegate = self
+        // MARK: - Connections        
+        tracksTableView.dataSource = self
+        tracksTableView.delegate = self
         
-        exploreTrendingCollectionView.dataSource = self
+        trendingsCollectionView.dataSource = self
+        trendingsCollectionView.delegate = self
+        
+        topicsCollectionView.dataSource = self
+        topicsCollectionView.delegate = self
         
         // MARK: - Register
-        exploreTracksTableView.register(ExploreTracksCell.self, forCellReuseIdentifier: "ExploreTracksCell")
-        exploreTrendingCollectionView.register(ExploreTrendingsCell.self, forCellWithReuseIdentifier: "ExploreTrendingsCell")
+        tracksTableView.register(ExploreTracksCell.self, forCellReuseIdentifier: tracksCellID)
+        trendingsCollectionView.register(ExploreTrendingsCell.self, forCellWithReuseIdentifier: trendingsCellID)
+        topicsCollectionView.register(ExploreTopicsCell.self, forCellWithReuseIdentifier: topicsCellID)
     }
 }
 
 // MARK: - UITableView Extensions
-extension ExploreController: UITableViewDataSource {
+extension ExploreController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
-        let cell = exploreTracksTableView.dequeueReusableCell(withIdentifier: "ExploreTracksCell", for: indexPath) as! ExploreTracksCell
+        let cell = tracksTableView.dequeueReusableCell(withIdentifier: "ExploreTracksCell", for: indexPath) as! ExploreTracksCell
     
         cell.trackPositionLabel.text = "0\(indexPath.row + 1)"
         cell.trackTitleLabel.text = tracks[indexPath.row].trackTitle
@@ -60,29 +78,50 @@ extension ExploreController: UITableViewDataSource {
         
         return cell
     }
-}
-
-extension ExploreController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
 }
 
 // MARK: - UICollectionView Extensions
-extension ExploreController: UICollectionViewDataSource {
+extension ExploreController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        trendings.count
+        switch collectionView {
+        case trendingsCollectionView:
+            return trendings.count
+        case topicsCollectionView:
+            return topics.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreTrendingsCell", for: indexPath) as? ExploreTrendingsCell else {
+        guard let trendingsCell = collectionView.dequeueReusableCell(withReuseIdentifier: trendingsCellID, for: indexPath) as? ExploreTrendingsCell else {
+            return UICollectionViewCell()
+        }
+        guard let topicsCell = collectionView.dequeueReusableCell(withReuseIdentifier: topicsCellID, for: indexPath) as? ExploreTopicsCell else {
             return UICollectionViewCell()
         }
         
-        cell.trendingImageView.image = UIImage(named: trendings[indexPath.row].trendingImage)
-        cell.trendingSignerLabel.text = trendings[indexPath.row].trendingSigner
-        cell.trendingTitleLabel.text = trendings[indexPath.row].trendingTitle
-        
-        return cell
+        switch collectionView {
+        case trendingsCell:
+            trendingsCell.trendingImageView.image = UIImage(named: trendings[indexPath.row].trendingImage)
+            trendingsCell.trendingSignerLabel.text = trendings[indexPath.row].trendingSigner
+            trendingsCell.trendingTitleLabel.text = trendings[indexPath.row].trendingTitle
+            return trendingsCell
+        case topicsCell:
+            topicsCell.topicsLabel.text = topics[indexPath.row].topicTitle
+            topicsCell.topicsImageView.image = UIImage(named: topics[indexPath.row].topicImage)
+            return topicsCell
+        default:
+            return UICollectionViewCell()
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let scrollPosition = scrollView.contentOffset.x / scrollView.frame.width
+        trendingsPageControls.currentPage = Int(scrollPosition)
     }
 }
