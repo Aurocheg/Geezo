@@ -61,6 +61,7 @@
 		DE737CAE28EC3ADA00BCE987 /* HomeAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE737CAD28EC3ADA00BCE987 /* HomeAlbumsCell.swift */; };
 		DE74D80328DE2E6A0046A878 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80228DE2E6A0046A878 /* MainConstraints.swift */; };
 		DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80628DE32570046A878 /* ExploreConstraints.swift */; };
+		DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */; };
 		DEA7DFF528ED5DA5003B3111 /* HomeAlbumsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */; };
 		DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C33C28D8C5F200207AB8 /* TabBarController.swift */; };
 		DED4C34328D8C78000207AB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34228D8C78000207AB8 /* HomeController.swift */; };
@@ -132,6 +133,7 @@
 		DE737CAD28EC3ADA00BCE987 /* HomeAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumsCell.swift; sourceTree = "<group>"; };
 		DE74D80228DE2E6A0046A878 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
 		DE74D80628DE32570046A878 /* ExploreConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreConstraints.swift; sourceTree = "<group>"; };
+		DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentlyTracksCell.swift; sourceTree = "<group>"; };
 		DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumsConstraints.swift; sourceTree = "<group>"; };
 		DED4C33C28D8C5F200207AB8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DED4C34228D8C78000207AB8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		DE683F0228D9AD0B00CCB5BA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE9E727528EE07D200654C43 /* Recently */,
 				DE737CAC28EC3A9400BCE987 /* Albums */,
 				DED4C34A28D8DD6F00207AB8 /* HomeView.swift */,
 				DE683F0328D9AD2000CCB5BA /* HomeConstraints.swift */,
@@ -491,6 +494,14 @@
 				DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		DE9E727528EE07D200654C43 /* Recently */ = {
+			isa = PBXGroup;
+			children = (
+				DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */,
+			);
+			path = Recently;
 			sourceTree = "<group>";
 		};
 		DED4C34028D8C73300207AB8 /* Main */ = {
@@ -634,6 +645,7 @@
 				DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE04D30928E6E54E00458078 /* ExploreTrendingsConstraints.swift in Sources */,
+				DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */,
 				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DED4C34928D8C7AF00207AB8 /* AccountController.swift in Sources */,

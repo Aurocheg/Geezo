@@ -47,6 +47,7 @@ final class HomeView: UIView {
         button = button.createButton(type: .label, background: false, border: false, text: "View all")
         button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 12.0)
         button.setTitleColor(ColorStyle().neutral1, for: .normal)
+        
         return button
     }()
     
@@ -62,9 +63,28 @@ final class HomeView: UIView {
         return collectionView
     }()
     
+    private let weeklyLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Geezo Weekly")
+    }()
+    
     private let weeklyVideoView: UIView = {
         let view = UIView()
+        view.backgroundColor = .systemYellow
         return view
+    }()
+    
+    private let recentlyTracksLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Recently Music")
+    }()
+    
+    public let recentlyTracksTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.isScrollEnabled = false
+        tableView.separatorStyle = .none
+        return tableView
     }()
     
     // MARK: - Init Method
@@ -89,10 +109,16 @@ final class HomeView: UIView {
         
         contentView.addSubview(mainTitleLabel)
         contentView.addSubview(searchButton)
+        
         contentView.addSubview(newAlbumsLabel)
         contentView.addSubview(viewAllButton)
         contentView.addSubview(albumsCollectionView)
+        
+        contentView.addSubview(weeklyLabel)
         contentView.addSubview(weeklyVideoView)
+        
+        contentView.addSubview(recentlyTracksLabel)
+        contentView.addSubview(recentlyTracksTableView)
     }
     
     // MARK: - Constraints Method
@@ -100,15 +126,16 @@ final class HomeView: UIView {
         mainConstraints.addConstraintsToScroll(scrollView, view: self)
         
         commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: contentView, leftConstant: 24.0, topConstant: 24.0, widthConstant: 140.0, heightConstant: 56.0)
-        
         mainConstraints.addConstraintsToSearch(searchButton, view: contentView, topConstant: 44.0, rightConstant: -24.0)
         
         mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: contentView, parent: mainTitleLabel, width: 125.0, height: 26.0, topConstant: 32.0)
-        
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: contentView, parent: searchButton, topConstant: 52.0)
-        
         homeConstraints.addConstraintsToAlbums(albumsCollectionView, view: contentView, parent: newAlbumsLabel)
         
+        mainConstraints.addConstraintsToLeftSubtitle(weeklyLabel, view: contentView, parent: albumsCollectionView, width: 140.0, height: 26.0, topConstant: 60.0)
+        homeConstraints.addConstraintsToWeeklyVideo(weeklyVideoView, view: contentView, parent: weeklyLabel)
         
+        mainConstraints.addConstraintsToLeftSubtitle(recentlyTracksLabel, view: contentView, parent: weeklyVideoView, width: 152.0, height: 26.0, topConstant: 40.0)
+        homeConstraints.addConstraintsToRecentlyTracks(recentlyTracksTableView, view: contentView, parent: recentlyTracksLabel)
     }
 }
