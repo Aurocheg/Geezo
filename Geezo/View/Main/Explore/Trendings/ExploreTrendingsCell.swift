@@ -28,6 +28,11 @@ final class ExploreTrendingsCell: UICollectionViewCell {
         return label.createLabel(font: "Roboto-Regular", size: 12.0, color: .white, text: "")
     }()
     
+    private let favoriteButton: UIButton = {
+        let button = UIButton()
+        return button.createButton(type: .social, background: false, border: false, text: "", image: UIImage(named: "favorite"))
+    }()
+    
     // MARK: - Init Method
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +50,7 @@ final class ExploreTrendingsCell: UICollectionViewCell {
         addSubview(trendingImageView)
         addSubview(trendingTitleLabel)
         addSubview(trendingSignerLabel)
+        addSubview(favoriteButton)
     }
     
     // MARK: - Init Constraints Method
@@ -52,5 +58,6 @@ final class ExploreTrendingsCell: UICollectionViewCell {
         exploreTrendingsConstraints.addConstraintsToTrendingImage(trendingImageView, view: self)
         exploreTrendingsConstraints.addConstraintsToTrendingSigner(trendingSignerLabel, view: self)
         exploreTrendingsConstraints.addConstraintsToTrendingTitle(trendingTitleLabel, tredingSignerLabel: trendingSignerLabel, view: self)
+        exploreTrendingsConstraints.addConstraintsToFavorite(favoriteButton, view: self)
     }
 }

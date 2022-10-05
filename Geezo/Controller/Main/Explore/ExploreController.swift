@@ -36,6 +36,10 @@ final class ExploreController: UIViewController {
     private var topicsCollectionView: UICollectionView {
         exploreView.topicsCollectionView
     }
+    
+    private var topicsViewAllButton: UIButton {
+        exploreView.topicViewAllButton
+    }
 
     // MARK: - View Life Cycle
     override func loadView() {
@@ -59,6 +63,21 @@ final class ExploreController: UIViewController {
         tracksTableView.register(ExploreTracksCell.self, forCellReuseIdentifier: tracksCellID)
         trendingsCollectionView.register(ExploreTrendingsCell.self, forCellWithReuseIdentifier: trendingsCellID)
         topicsCollectionView.register(ExploreTopicsCell.self, forCellWithReuseIdentifier: topicsCellID)
+        
+        // MARK: - Targets
+        trendingsPageControls.addTarget(self, action: #selector(trendingsPageControlTapped), for: .touchUpInside)
+        topicsViewAllButton.addTarget(self, action: #selector(topicsViewAllButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - @objc
+    @objc func trendingsPageControlTapped() {
+        let indexPath = IndexPath(item: trendingsPageControls.currentPage, section: 0)
+        trendingsCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    @objc func topicsViewAllButtonTapped() {
+        print("test")
+        navigationController?.pushViewController(TopicsController(), animated: true)
     }
 }
 
@@ -69,7 +88,7 @@ extension ExploreController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
-        let cell = tracksTableView.dequeueReusableCell(withIdentifier: "ExploreTracksCell", for: indexPath) as! ExploreTracksCell
+        let cell = tracksTableView.dequeueReusableCell(withIdentifier: tracksCellID, for: indexPath) as! ExploreTracksCell
     
         cell.trackPositionLabel.text = "0\(indexPath.row + 1)"
         cell.trackTitleLabel.text = tracks[indexPath.row].trackTitle
@@ -98,20 +117,19 @@ extension ExploreController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let trendingsCell = collectionView.dequeueReusableCell(withReuseIdentifier: trendingsCellID, for: indexPath) as? ExploreTrendingsCell else {
-            return UICollectionViewCell()
-        }
-        guard let topicsCell = collectionView.dequeueReusableCell(withReuseIdentifier: topicsCellID, for: indexPath) as? ExploreTopicsCell else {
-            return UICollectionViewCell()
-        }
-        
         switch collectionView {
-        case trendingsCell:
+        case trendingsCollectionView:
+            guard let trendingsCell = collectionView.dequeueReusableCell(withReuseIdentifier: trendingsCellID, for: indexPath) as? ExploreTrendingsCell else {
+                return UICollectionViewCell()
+            }
             trendingsCell.trendingImageView.image = UIImage(named: trendings[indexPath.row].trendingImage)
             trendingsCell.trendingSignerLabel.text = trendings[indexPath.row].trendingSigner
             trendingsCell.trendingTitleLabel.text = trendings[indexPath.row].trendingTitle
             return trendingsCell
-        case topicsCell:
+        case topicsCollectionView:
+            guard let topicsCell = collectionView.dequeueReusableCell(withReuseIdentifier: topicsCellID, for: indexPath) as? ExploreTopicsCell else {
+                return UICollectionViewCell()
+            }
             topicsCell.topicsLabel.text = topics[indexPath.row].topicTitle
             topicsCell.topicsImageView.image = UIImage(named: topics[indexPath.row].topicImage)
             return topicsCell

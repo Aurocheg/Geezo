@@ -34,4 +34,13 @@ final class ExploreTrendingsConstraints: UIView {
         trendingTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32.0).isActive = true
         trendingTitleLabel.heightAnchor.constraint(equalToConstant: 19.0).isActive = true
     }
+    
+    public func addConstraintsToFavorite(_ favoriteButton: UIButton, view: UICollectionViewCell) {
+        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        favoriteButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -18.0).isActive = true
+        favoriteButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -18.0).isActive = true
+        favoriteButton.widthAnchor.constraint(equalToConstant: 20.0).isActive = true
+        favoriteButton.heightAnchor.constraint(equalToConstant: 18.0).isActive = true
+    }
 }

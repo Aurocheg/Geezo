@@ -16,21 +16,14 @@ final class ExploreView: UIView {
     private let exploreConstraints = ExploreConstraints()
     
     // MARK: - Init UI Elements
-    private var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        let width = UIScreen.main.bounds.size.width        
-        scrollView.contentSize = CGSize(width: width, height: 1500)
-        scrollView.layoutIfNeeded()
-        return scrollView
+    private let scrollView: UIScrollView = {
+        var scrollView = UIScrollView()
+        return scrollView.createScrollView(height: 1070)
     }()
     
-    private var contentView: UIView = {
+    private let contentView: UIView = {
         let view = UIView()
-        let width = UIScreen.main.bounds.width
-        
-        view.frame.size = CGSize(width: width, height: 1500)
-        view.isUserInteractionEnabled = true
-        return view
+        return view.createContentView(height: 1070)
     }()
     
     private let mainTitleLabel: UILabel = {
@@ -74,16 +67,15 @@ final class ExploreView: UIView {
     
     public let trendingsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        let itemWidth = UIScreen.main.bounds.width
         
-        layout.itemSize = CGSize(width: itemWidth - 48.0, height: 200)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 48.0, height: 200.0)
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0.0
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
-        collectionView.backgroundColor = .clear
         
         return collectionView
     }()
@@ -105,7 +97,7 @@ final class ExploreView: UIView {
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Topic")
     }()
     
-    private let topicViewAllButton: UIButton = {
+    public let topicViewAllButton: UIButton = {
         var button = UIButton()
         button = button.createButton(type: .label, background: false, border: false, text: "View all")
         button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 12.0)
@@ -181,9 +173,9 @@ final class ExploreView: UIView {
         
         exploreConstraints.addConstraintsToPageControl(trendingsPageControls, view: contentView, parent: trendingsCollectionView)
         
-        mainConstraints.addConstraintsToLeftSubtitle(topicLabel, view: contentView, parent: trendingsPageControls, width: 54.0, height: 26.0, topConstant: 66.0)
+        mainConstraints.addConstraintsToLeftSubtitle(topicLabel, view: contentView, parent: trendingsPageControls, width: 54.0, height: 26.0, topConstant: 40.0)
 
-        mainConstraints.addConstraintsToViewAll(topicViewAllButton, view: contentView, parent: trendingsPageControls, topConstant: 74.0)
+        mainConstraints.addConstraintsToViewAll(topicViewAllButton, view: contentView, parent: trendingsPageControls, topConstant: 52.0)
         
         exploreConstraints.addConstraintsToCollection(topicsCollectionView, view: contentView, parent: topicLabel, heightConstant: 216.0)
     }

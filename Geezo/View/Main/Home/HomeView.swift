@@ -16,6 +16,16 @@ final class HomeView: UIView {
     private let homeConstraints = HomeConstraints()
     
     // MARK: - Init UI Elements
+    private let scrollView: UIScrollView = {
+        var scrollView = UIScrollView()
+        return scrollView.createScrollView(height: 1070)
+    }()
+    
+    private let contentView: UIView = {
+        var view = UIView()
+        return view.createContentView(height: 1070)
+    }()
+    
     private let mainTitleLabel: UILabel = {
         let label = UILabel()
         return label.createLabel(font: "Roboto-Bold", size: 48.0, color: ColorStyle().neutral1, text: "Geezo")
@@ -40,14 +50,22 @@ final class HomeView: UIView {
         return button
     }()
     
-    lazy var albumCarousel = AlbumCarousel(frame: .zero, albumImages: albumImages)
+    public let albumsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 188.0, height: 188.0)
+        layout.minimumLineSpacing = 20.0
+        layout.scrollDirection = .horizontal
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        
+        return collectionView
+    }()
     
-    // MARK: - Variables
-    let albumImages = [
-        UIImage(named: "albumCollectionCell1")!,
-        UIImage(named: "albumCollectionCell2")!,
-        UIImage(named: "albumCollectionCell3")!
-    ]
+    private let weeklyVideoView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     // MARK: - Init Method
     init() {
@@ -66,19 +84,31 @@ final class HomeView: UIView {
         backgroundColor = colorStyle.brand1
         
         // MARK: - Adding Subviews
-        addSubview(mainTitleLabel)
-        addSubview(searchButton)
-        addSubview(newAlbumsLabel)
-        addSubview(viewAllButton)
-        addSubview(albumCarousel)
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(mainTitleLabel)
+        contentView.addSubview(searchButton)
+        contentView.addSubview(newAlbumsLabel)
+        contentView.addSubview(viewAllButton)
+        contentView.addSubview(albumsCollectionView)
+        contentView.addSubview(weeklyVideoView)
     }
     
     // MARK: - Constraints Method
     private func initConstraints() {
-        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: self, leftConstant: 24.0, topConstant: 64.0, widthConstant: 140.0, heightConstant: 56.0)
-        mainConstraints.addConstraintsToSearch(searchButton, view: self, topConstant: 84.0, rightConstant: -24.0)
-        mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: self, parent: mainTitleLabel, width: 125.0, height: 66.0, topConstant: 32.0)
-        mainConstraints.addConstraintsToViewAll(viewAllButton, view: self, parent: searchButton, topConstant: 56.0)
-        homeConstraints.addConstraintsToAlbums(albumCarousel, view: self, parent: newAlbumsLabel)
+        mainConstraints.addConstraintsToScroll(scrollView, view: self)
+        
+        commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: contentView, leftConstant: 24.0, topConstant: 24.0, widthConstant: 140.0, heightConstant: 56.0)
+        
+        mainConstraints.addConstraintsToSearch(searchButton, view: contentView, topConstant: 44.0, rightConstant: -24.0)
+        
+        mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: contentView, parent: mainTitleLabel, width: 125.0, height: 26.0, topConstant: 32.0)
+        
+        mainConstraints.addConstraintsToViewAll(viewAllButton, view: contentView, parent: searchButton, topConstant: 52.0)
+        
+        homeConstraints.addConstraintsToAlbums(albumsCollectionView, view: contentView, parent: newAlbumsLabel)
+        
+        
     }
 }
