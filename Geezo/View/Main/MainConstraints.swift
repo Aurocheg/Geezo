@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum TableViewType {
+    case fullWidth
+    case withMargins
+}
+
 final class MainConstraints: UIView {
     public func addConstraintsToScroll(_ scrollView: UIScrollView, view: UIView) {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,5 +47,23 @@ final class MainConstraints: UIView {
         viewAllButton.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: topConstant).isActive = true
         viewAllButton.widthAnchor.constraint(equalToConstant: 43.0).isActive = true
         viewAllButton.heightAnchor.constraint(equalToConstant: 14.0).isActive = true
+    }
+    
+    public func addConstraintsToTable(_ tableView: UITableView, view: UIView, parent: AnyObject, topConstant: CGFloat, leftConstant: CGFloat, heightConstant: CGFloat? = nil, type: TableViewType) {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: topConstant).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: leftConstant).isActive = true
+        
+        if let constant = heightConstant {
+            tableView.heightAnchor.constraint(equalToConstant: constant).isActive = true
+        }
+        
+        switch type {
+        case .fullWidth:
+            tableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        case .withMargins:
+            tableView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -leftConstant * 2).isActive = true
+        }
     }
 }
