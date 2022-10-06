@@ -9,7 +9,7 @@ import UIKit
 
 class HomeRecentlyTracksCell: UITableViewCell {
     // MARK: - Constraints
-    private let exploreTracksCellConstraints = ExploreTracksCellConstraints()
+    private let tracksCellConstraints = TracksCellConstraints()
     
     // MARK: - UI Elements
     public let trackPositionLabel: UILabel = {
@@ -63,11 +63,11 @@ class HomeRecentlyTracksCell: UITableViewCell {
     }
     
     private func initConstraints() {
-        exploreTracksCellConstraints.addConstraintsToTrackPosition(trackPositionLabel, view: self)
-        exploreTracksCellConstraints.addConstraintsToTrackImage(trackImageView, view: self, parent: trackPositionLabel)
-        exploreTracksCellConstraints.addConstraintsToTrackTitle(trackTitleLabel, view: self, parent: trackImageView)
-        exploreTracksCellConstraints.addConstraintsToTrackSigner(trackSignerLabel, parent: trackTitleLabel, imageView: trackImageView)
-        exploreTracksCellConstraints.addConstraintsToTrackSettings(trackSettings, view: self)
+        tracksCellConstraints.addConstraintsToTrackPosition(trackPositionLabel, view: self, leftConstant: 0.0)
+        tracksCellConstraints.addConstraintsToTrackImage(trackImageView, view: self, parent: trackPositionLabel)
+        tracksCellConstraints.addConstraintsToTrackTitle(trackTitleLabel, view: self, parent: trackImageView)
+        tracksCellConstraints.addConstraintsToTrackSigner(trackSignerLabel, parent: trackTitleLabel, imageView: trackImageView)
+        tracksCellConstraints.addConstraintsToTrackSettings(trackSettings, view: self)
     }
     
     // MARK: - System Methods

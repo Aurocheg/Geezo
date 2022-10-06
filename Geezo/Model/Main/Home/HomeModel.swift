@@ -24,7 +24,8 @@ struct HomeAlbumsModel: HomeAlbumsProtocol {
         let albums = [
             HomeAlbumsModel(albumImage: "albumCollectionCell1", albumTitle: "Do it", albumGroup: "Milian Luu"),
             HomeAlbumsModel(albumImage: "albumCollectionCell2", albumTitle: "Pray For You", albumGroup: "The Weekend"),
-            HomeAlbumsModel(albumImage: "albumCollectionCell3", albumTitle: "Nice For What", albumGroup: "Avinci John")
+            HomeAlbumsModel(albumImage: "albumCollectionCell3", albumTitle: "Nice For What", albumGroup: "Avinci John"),
+            HomeAlbumsModel(albumImage: "albumCollectionCell4", albumTitle: "In Da Club", albumGroup: "50 cent")
         ]
         return albums
     }

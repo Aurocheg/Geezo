@@ -1,17 +1,17 @@
 //
-//  ExploreTracksConstraints.swift
+//  TracksCellConstraints.swift
 //  Geezo
 //
-//  Created by Aurocheg on 28.09.22.
+//  Created by Aurocheg on 6.10.22.
 //
 
 import UIKit
 
-final class ExploreTracksCellConstraints: UIView {
-    public func addConstraintsToTrackPosition(_ trackPositionLabel: UILabel, view: UITableViewCell) {
+class TracksCellConstraints: UIView {
+    public func addConstraintsToTrackPosition(_ trackPositionLabel: UILabel, view: UITableViewCell, leftConstant: CGFloat) {
         trackPositionLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        trackPositionLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12.0).isActive = true
+        trackPositionLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: leftConstant).isActive = true
         trackPositionLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 24.0).isActive = true
         trackPositionLabel.widthAnchor.constraint(equalToConstant: 16.0).isActive = true
         trackPositionLabel.heightAnchor.constraint(equalToConstant: 18.0).isActive = true

@@ -10,20 +10,20 @@ import UIKit
 final class HomeView: UIView {
     private let colorStyle = ColorStyle()
     
-    // MARK: - Init Constraints
+        // MARK: - Init Constraints
     private let commonConstraints = CommonConstraints()
     private let mainConstraints = MainConstraints()
     private let homeConstraints = HomeConstraints()
     
-    // MARK: - Init UI Elements
+        // MARK: - Init UI Elements
     private let scrollView: UIScrollView = {
         var scrollView = UIScrollView()
-        return scrollView.createScrollView(height: 1070)
+        return scrollView.createScrollView(height: 950.0)
     }()
     
     private let contentView: UIView = {
         var view = UIView()
-        return view.createContentView(height: 1070)
+        return view.createContentView(height: 950.0)
     }()
     
     private let mainTitleLabel: UILabel = {
@@ -68,10 +68,64 @@ final class HomeView: UIView {
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Geezo Weekly")
     }()
     
-    private let weeklyVideoView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemYellow
-        return view
+    private let weeklyView = UIView()
+    
+    private let weeklyImageView: UIImageView = {
+        let imageView = UIImageView()
+        
+        if let image = UIImage(named: "weeklyAudioImage") {
+            imageView.image = image
+        }
+        
+        imageView.layer.cornerRadius = 5.0
+        
+        return imageView
+    }()
+    
+    private let weeklyTitleLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Bold", size: 16.0, color: .white, text: "Pray For You")
+    }()
+    
+    private let weeklyGroupLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Regular", size: 12.0, color: .white, text: "The Weekend")
+    }()
+    
+    private let weeklySliderView = UIView()
+    
+    private let weeklySlider: UISlider = {
+        let slider = UISlider()
+        
+        slider.minimumTrackTintColor = ColorStyle().brand2
+        slider.maximumTrackTintColor = .white
+        
+        if let image = UIImage(named: "sliderThumb") {
+            slider.setThumbImage(image, for: .normal)
+        }
+        
+        
+        return slider
+    }()
+    
+    private let weeklySliderMinLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "2:46")
+    }()
+    
+    private let weeklySliderMaxLabel: UILabel = {
+        let label = UILabel()
+        return label.createLabel(font: "Roboto-Regular", size: 14.0, color: .white, text: "3:05")
+    }()
+    
+    private let weeklyPlayButton: UIButton = {
+        let button = UIButton()
+        
+        if let image = UIImage(named: "playFill") {
+            button.setImage(image, for: .normal)
+        }
+        
+        return button
     }()
     
     private let recentlyTracksLabel: UILabel = {
@@ -103,20 +157,31 @@ final class HomeView: UIView {
     private func initViews() {
         backgroundColor = colorStyle.brand1
         
-        // MARK: - Adding Subviews
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         
         contentView.addSubview(mainTitleLabel)
         contentView.addSubview(searchButton)
         
+        // MARK: - Albums
         contentView.addSubview(newAlbumsLabel)
         contentView.addSubview(viewAllButton)
         contentView.addSubview(albumsCollectionView)
         
+        // MARK: - Weekly
         contentView.addSubview(weeklyLabel)
-        contentView.addSubview(weeklyVideoView)
+        contentView.addSubview(weeklyView)
+        weeklyView.addSubview(weeklyImageView)
+        weeklyView.addSubview(weeklyTitleLabel)
+        weeklyView.addSubview(weeklyGroupLabel)
+        weeklyView.addSubview(weeklySliderView)
+        weeklyView.addSubview(weeklyPlayButton)
         
+        weeklySliderView.addSubview(weeklySlider)
+        weeklySliderView.addSubview(weeklySliderMinLabel)
+        weeklySliderView.addSubview(weeklySliderMaxLabel)
+        
+        // MARK: - Recently Tracks
         contentView.addSubview(recentlyTracksLabel)
         contentView.addSubview(recentlyTracksTableView)
     }
@@ -133,9 +198,18 @@ final class HomeView: UIView {
         homeConstraints.addConstraintsToAlbums(albumsCollectionView, view: contentView, parent: newAlbumsLabel)
         
         mainConstraints.addConstraintsToLeftSubtitle(weeklyLabel, view: contentView, parent: albumsCollectionView, width: 140.0, height: 26.0, topConstant: 60.0)
-        homeConstraints.addConstraintsToWeeklyVideo(weeklyVideoView, view: contentView, parent: weeklyLabel)
+        homeConstraints.addConstraintsToWeeklyVideo(weeklyView, view: contentView, parent: weeklyLabel)
+        homeConstraints.addConstraintsToWeeklyImage(weeklyImageView, view: weeklyView)
+        homeConstraints.addConstraintsToWeeklyTitle(weeklyTitleLabel, view: weeklyView)
+        homeConstraints.addConstraintsToWeeklyGroup(weeklyGroupLabel, view: weeklyView, parent: weeklyTitleLabel)
+        homeConstraints.addConstraintsToWeeklyPlay(weeklyPlayButton, view: weeklyView)
         
-        mainConstraints.addConstraintsToLeftSubtitle(recentlyTracksLabel, view: contentView, parent: weeklyVideoView, width: 152.0, height: 26.0, topConstant: 40.0)
+        homeConstraints.addConstraintsToWeeklySliderView(weeklySliderView, view: weeklyView)
+        homeConstraints.addConstraintsToWeeklySlider(weeklySlider, sliderView: weeklySliderView)
+        homeConstraints.addConstraintsToTimeLabel(weeklySliderMinLabel, sliderView: weeklySliderView, type: .min)
+        homeConstraints.addConstraintsToTimeLabel(weeklySliderMaxLabel, sliderView: weeklySliderView, type: .max)
+        
+        mainConstraints.addConstraintsToLeftSubtitle(recentlyTracksLabel, view: contentView, parent: weeklyView, width: 152.0, height: 26.0, topConstant: 40.0)
         homeConstraints.addConstraintsToRecentlyTracks(recentlyTracksTableView, view: contentView, parent: recentlyTracksLabel)
     }
 }

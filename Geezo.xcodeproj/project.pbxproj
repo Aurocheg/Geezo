@@ -22,7 +22,6 @@
 		DE1B7B6A28E4B57400C35B72 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6928E4B57400C35B72 /* RadioModel.swift */; };
 		DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */; };
 		DE1B7B6F28E4B69E00C35B72 /* ExploreTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */; };
-		DE1B7B7528E4C3D800C35B72 /* ExploreTracksCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
@@ -35,6 +34,8 @@
 		DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57428CDEE5700E3DE1B /* SignInController.swift */; };
 		DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */; };
 		DE4F286B28D1C43200996340 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */; };
+		DE5DF6F928EEE11C00DE8413 /* TracksCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5DF6F828EEE11C00DE8413 /* TracksCellConstraints.swift */; };
+		DE5DF6FB28EEE75900DE8413 /* UISliderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5DF6FA28EEE75900DE8413 /* UISliderExtension.swift */; };
 		DE64BF0728D74D2700C6139B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0628D74D2700C6139B /* SignUpController.swift */; };
 		DE64BF0A28D74D5900C6139B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0928D74D5900C6139B /* SignUpView.swift */; };
 		DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */; };
@@ -94,7 +95,6 @@
 		DE1B7B6928E4B57400C35B72 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
 		DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTracksCell.swift; sourceTree = "<group>"; };
-		DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTracksCellConstraints.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -107,6 +107,8 @@
 		DE4DA57428CDEE5700E3DE1B /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		DE4DA57628CDEE8A00E3DE1B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DE4F286A28D1C43200996340 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		DE5DF6F828EEE11C00DE8413 /* TracksCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksCellConstraints.swift; sourceTree = "<group>"; };
+		DE5DF6FA28EEE75900DE8413 /* UISliderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderExtension.swift; sourceTree = "<group>"; };
 		DE64BF0628D74D2700C6139B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DE64BF0928D74D5900C6139B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DE64BF0D28D7556800C6139B /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
@@ -268,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */,
-				DE1B7B7428E4C3D800C35B72 /* ExploreTracksCellConstraints.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -334,6 +335,7 @@
 				DE737CA828EC308B00BCE987 /* UIScrollViewExtension.swift */,
 				DE737CAA28EC319400BCE987 /* UIViewExtension.swift */,
 				DE6B9C5528EC936100B52D0A /* UICollectionViewExtension.swift */,
+				DE5DF6FA28EEE75900DE8413 /* UISliderExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +526,7 @@
 				DE74D80428DE2E6F0046A878 /* Radio */,
 				DE74D80528DE2E7D0046A878 /* Account */,
 				DE74D80228DE2E6A0046A878 /* MainConstraints.swift */,
+				DE5DF6F828EEE11C00DE8413 /* TracksCellConstraints.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -631,12 +634,12 @@
 				DE4DA57528CDEE5700E3DE1B /* SignInController.swift in Sources */,
 				DED4C35128D8DD9100207AB8 /* AccountView.swift in Sources */,
 				DE1B7B5E28E4ABB100C35B72 /* UIButtonExtension.swift in Sources */,
-				DE1B7B7528E4C3D800C35B72 /* ExploreTracksCellConstraints.swift in Sources */,
 				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
 				DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */,
 				DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */,
 				DEA7DFF528ED5DA5003B3111 /* HomeAlbumsConstraints.swift in Sources */,
 				DED4C34F28D8DD8600207AB8 /* RadioView.swift in Sources */,
+				DE5DF6FB28EEE75900DE8413 /* UISliderExtension.swift in Sources */,
 				DE737CAE28EC3ADA00BCE987 /* HomeAlbumsCell.swift in Sources */,
 				DEFF500E28EB4DCC006F8910 /* ExploreTopicsCell.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
@@ -650,6 +653,7 @@
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DED4C34928D8C7AF00207AB8 /* AccountController.swift in Sources */,
 				DE737CAB28EC319400BCE987 /* UIViewExtension.swift in Sources */,
+				DE5DF6F928EEE11C00DE8413 /* TracksCellConstraints.swift in Sources */,
 				DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */,
 				DE737CA928EC308B00BCE987 /* UIScrollViewExtension.swift in Sources */,
 				DE64BF1128D755BB00C6139B /* ForgotPasswordView.swift in Sources */,
