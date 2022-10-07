@@ -53,6 +53,8 @@ class RadioView: UIView {
         let tableView = UITableView()
         
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        tableView.showsVerticalScrollIndicator = false
         
         return tableView
     }()
@@ -88,7 +90,6 @@ class RadioView: UIView {
         commonConstraints.addConstraintsToText(radioWeeklyTextLabel, view: self, parent: radioWeeklyLabel, leftConstant: 25.0, topConstant: 5.0, widthConstant: 120.0, heightConstant: 18.0)
         radioConstraints.addConstraintsToRadioCollection(radioCollectionView, view: self, parent: radioWeeklyTextLabel)
         mainConstraints.addConstraintsToLeftSubtitle(popularLabel, view: self, parent: radioCollectionView, width: 77.0, height: 26.0, topConstant: 40.0)
-        mainConstraints.addConstraintsToTable(popularTableView, view: self, parent: popularLabel, topConstant: 20.0, leftConstant: 24.0, heightConstant: 240.0, type: .withMargins)
+        mainConstraints.addConstraintsToTable(popularTableView, view: self, parent: popularLabel, topConstant: 20.0, leftConstant: 24.0, heightConstant: 280.0, type: .withMargins)
     }
 }
-

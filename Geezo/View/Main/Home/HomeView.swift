@@ -10,12 +10,12 @@ import UIKit
 final class HomeView: UIView {
     private let colorStyle = ColorStyle()
     
-        // MARK: - Init Constraints
+    // MARK: - Init Constraints
     private let commonConstraints = CommonConstraints()
     private let mainConstraints = MainConstraints()
     private let homeConstraints = HomeConstraints()
     
-        // MARK: - Init UI Elements
+    // MARK: - Init UI Elements
     private let scrollView: UIScrollView = {
         var scrollView = UIScrollView()
         return scrollView.createScrollView(height: 950.0)

@@ -52,8 +52,8 @@ final class ExploreTracksCell: UITableViewCell {
     
     // MARK: - Init Views
     private func initViews() {
-        self.backgroundColor = .clear
-        self.selectionStyle = .none
+        backgroundColor = .clear
+        selectionStyle = .none
         
         addSubview(trackPositionLabel)
         addSubview(trackImageView)

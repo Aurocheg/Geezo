@@ -49,15 +49,12 @@ final class MainConstraints: UIView {
         viewAllButton.heightAnchor.constraint(equalToConstant: 14.0).isActive = true
     }
     
-    public func addConstraintsToTable(_ tableView: UITableView, view: UIView, parent: AnyObject, topConstant: CGFloat, leftConstant: CGFloat, heightConstant: CGFloat? = nil, type: TableViewType) {
+    public func addConstraintsToTable(_ tableView: UITableView, view: UIView, parent: AnyObject, topConstant: CGFloat, leftConstant: CGFloat, heightConstant: CGFloat, type: TableViewType) {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: topConstant).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: leftConstant).isActive = true
-        
-        if let constant = heightConstant {
-            tableView.heightAnchor.constraint(equalToConstant: constant).isActive = true
-        }
+        tableView.heightAnchor.constraint(equalToConstant: heightConstant).isActive = true
         
         switch type {
         case .fullWidth:

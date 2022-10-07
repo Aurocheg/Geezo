@@ -23,6 +23,12 @@
 		DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */; };
 		DE1B7B6F28E4B69E00C35B72 /* ExploreTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */; };
 		DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27953628D4E08200375D48 /* SignInConstraints.swift */; };
+		DE3519D928F09C5C0093055C /* MetricsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519D828F09C5C0093055C /* MetricsCollectionCell.swift */; };
+		DE3519DB28F09CC30093055C /* MetricsCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519DA28F09CC30093055C /* MetricsCellConstraints.swift */; };
+		DE3519DE28F0A4D10093055C /* LibraryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519DD28F0A4D10093055C /* LibraryTableCell.swift */; };
+		DE3519E128F0A5080093055C /* LibraryCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519E028F0A5080093055C /* LibraryCellConstraints.swift */; };
+		DE3519E428F0B6140093055C /* RecentActivityCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519E328F0B6140093055C /* RecentActivityCollectionCell.swift */; };
+		DE3519E628F0B6250093055C /* RecentActivityCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3519E528F0B6250093055C /* RecentActivityCellConstraints.swift */; };
 		DE4DA56828CDEB6900E3DE1B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */; };
 		DE4DA56928CDEB6900E3DE1B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */; };
 		DE4DA56A28CDEB6900E3DE1B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */; };
@@ -67,6 +73,7 @@
 		DE737CAE28EC3ADA00BCE987 /* HomeAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE737CAD28EC3ADA00BCE987 /* HomeAlbumsCell.swift */; };
 		DE74D80328DE2E6A0046A878 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80228DE2E6A0046A878 /* MainConstraints.swift */; };
 		DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE74D80628DE32570046A878 /* ExploreConstraints.swift */; };
+		DE877DA528F02035007121EF /* AccountConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE877DA428F02035007121EF /* AccountConstraints.swift */; };
 		DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */; };
 		DEA7DFF528ED5DA5003B3111 /* HomeAlbumsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */; };
 		DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C33C28D8C5F200207AB8 /* TabBarController.swift */; };
@@ -101,6 +108,12 @@
 		DE1B7B6B28E4B59700C35B72 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		DE1B7B6E28E4B69E00C35B72 /* ExploreTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTracksCell.swift; sourceTree = "<group>"; };
 		DE27953628D4E08200375D48 /* SignInConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConstraints.swift; sourceTree = "<group>"; };
+		DE3519D828F09C5C0093055C /* MetricsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsCollectionCell.swift; sourceTree = "<group>"; };
+		DE3519DA28F09CC30093055C /* MetricsCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsCellConstraints.swift; sourceTree = "<group>"; };
+		DE3519DD28F0A4D10093055C /* LibraryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableCell.swift; sourceTree = "<group>"; };
+		DE3519E028F0A5080093055C /* LibraryCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellConstraints.swift; sourceTree = "<group>"; };
+		DE3519E328F0B6140093055C /* RecentActivityCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentActivityCollectionCell.swift; sourceTree = "<group>"; };
+		DE3519E528F0B6250093055C /* RecentActivityCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentActivityCellConstraints.swift; sourceTree = "<group>"; };
 		DE4DA56428CDEB6900E3DE1B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DE4DA56528CDEB6900E3DE1B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		DE4DA56628CDEB6900E3DE1B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -145,6 +158,7 @@
 		DE737CAD28EC3ADA00BCE987 /* HomeAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumsCell.swift; sourceTree = "<group>"; };
 		DE74D80228DE2E6A0046A878 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
 		DE74D80628DE32570046A878 /* ExploreConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreConstraints.swift; sourceTree = "<group>"; };
+		DE877DA428F02035007121EF /* AccountConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountConstraints.swift; sourceTree = "<group>"; };
 		DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentlyTracksCell.swift; sourceTree = "<group>"; };
 		DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumsConstraints.swift; sourceTree = "<group>"; };
 		DED4C33C28D8C5F200207AB8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -291,6 +305,33 @@
 				DE27953628D4E08200375D48 /* SignInConstraints.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DE3519D728F09C3B0093055C /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				DE3519D828F09C5C0093055C /* MetricsCollectionCell.swift */,
+				DE3519DA28F09CC30093055C /* MetricsCellConstraints.swift */,
+			);
+			path = Metrics;
+			sourceTree = "<group>";
+		};
+		DE3519DC28F0A4AF0093055C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DE3519DD28F0A4D10093055C /* LibraryTableCell.swift */,
+				DE3519E028F0A5080093055C /* LibraryCellConstraints.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DE3519E228F0B5F00093055C /* Recent Activity */ = {
+			isa = PBXGroup;
+			children = (
+				DE3519E328F0B6140093055C /* RecentActivityCollectionCell.swift */,
+				DE3519E528F0B6250093055C /* RecentActivityCellConstraints.swift */,
+			);
+			path = "Recent Activity";
 			sourceTree = "<group>";
 		};
 		DE4DA55F28CDEB3D00E3DE1B /* Fonts */ = {
@@ -441,7 +482,11 @@
 		DE74D80528DE2E7D0046A878 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				DE3519E228F0B5F00093055C /* Recent Activity */,
+				DE3519DC28F0A4AF0093055C /* Library */,
+				DE3519D728F09C3B0093055C /* Metrics */,
 				DED4C35028D8DD9100207AB8 /* AccountView.swift */,
+				DE877DA428F02035007121EF /* AccountConstraints.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -658,6 +703,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3519E128F0A5080093055C /* LibraryCellConstraints.swift in Sources */,
+				DE3519DB28F09CC30093055C /* MetricsCellConstraints.swift in Sources */,
 				DE64BF1828D7605700C6139B /* ChangePasswordController.swift in Sources */,
 				DE1B7B6028E4AC9800C35B72 /* UISwitchExtension.swift in Sources */,
 				DE16570428D8792700CAE725 /* CommonConstraints.swift in Sources */,
@@ -674,6 +721,7 @@
 				DE5DF6FB28EEE75900DE8413 /* UISliderExtension.swift in Sources */,
 				DE737CAE28EC3ADA00BCE987 /* HomeAlbumsCell.swift in Sources */,
 				DEFF500E28EB4DCC006F8910 /* ExploreTopicsCell.swift in Sources */,
+				DE3519E428F0B6140093055C /* RecentActivityCollectionCell.swift in Sources */,
 				DE64BF1F28D78DCD00C6139B /* UILabelExtension.swift in Sources */,
 				DE5DF70128EF406800DE8413 /* PopularTableCell.swift in Sources */,
 				DE5DF70728EF433200DE8413 /* PopularCellConstraints.swift in Sources */,
@@ -682,10 +730,12 @@
 				DE1B7B6428E4B3DD00C35B72 /* ColorStyle.swift in Sources */,
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE04D30928E6E54E00458078 /* ExploreTrendingsConstraints.swift in Sources */,
+				DE877DA528F02035007121EF /* AccountConstraints.swift in Sources */,
 				DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */,
 				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
 				DED4C34928D8C7AF00207AB8 /* AccountController.swift in Sources */,
+				DE3519D928F09C5C0093055C /* MetricsCollectionCell.swift in Sources */,
 				DE737CAB28EC319400BCE987 /* UIViewExtension.swift in Sources */,
 				DE5DF6F928EEE11C00DE8413 /* TracksCellConstraints.swift in Sources */,
 				DE64BF2328D791E200C6139B /* VerifyPhoneController.swift in Sources */,
@@ -705,6 +755,7 @@
 				DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */,
 				DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */,
 				DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */,
+				DE3519E628F0B6250093055C /* RecentActivityCellConstraints.swift in Sources */,
 				DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */,
 				DED4C34728D8C7A300207AB8 /* RadioController.swift in Sources */,
 				DE737CA528EC25A300BCE987 /* TopicsController.swift in Sources */,
@@ -713,6 +764,7 @@
 				DE6B9C5628EC936100B52D0A /* UICollectionViewExtension.swift in Sources */,
 				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
+				DE3519DE28F0A4D10093055C /* LibraryTableCell.swift in Sources */,
 				DE64BF3228D7929900C6139B /* VerifyCodeConstraints.swift in Sources */,
 				DE1B7B6A28E4B57400C35B72 /* RadioModel.swift in Sources */,
 				DE12F9E228C8F19F00F416EF /* SceneDelegate.swift in Sources */,

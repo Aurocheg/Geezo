@@ -48,7 +48,10 @@ final class PopularTableCell: UITableViewCell {
     }
     
     // MARK: - Init Views Method
-    private func initViews() {        
+    private func initViews() {
+        backgroundColor = .clear
+        selectionStyle = .none
+        
         addSubview(popularImageView)
         addSubview(popularLabelsView)
         popularLabelsView.addSubview(popularTitleLabel)
@@ -58,7 +61,7 @@ final class PopularTableCell: UITableViewCell {
     // MARK: - Init Constraints Method
     private func initConstraints() {
         popularCellConstraints.addConstraintToImage(popularImageView, view: self)
-        popularCellConstraints.addConstraintsToLabels(popularLabelsView, view: self)
+        popularCellConstraints.addConstraintsToLabels(popularLabelsView, view: self, imageView: popularImageView)
         popularCellConstraints.addConstraintsToTitle(popularTitleLabel, view: popularLabelsView)
         popularCellConstraints.addConstraintsToText(popularTextLabel, view: popularLabelsView, parent: popularTitleLabel)
     }
@@ -70,7 +73,6 @@ final class PopularTableCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
