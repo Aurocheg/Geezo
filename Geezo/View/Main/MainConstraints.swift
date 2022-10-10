@@ -15,11 +15,20 @@ enum TableViewType {
 final class MainConstraints: UIView {
     public func addConstraintsToScroll(_ scrollView: UIScrollView, view: UIView) {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
+                
+        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44.0).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    public func addConstraintsToContent(_ contentView: UIView, scrollView: UIScrollView) {
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
     
     public func addConstraintsToSearch(_ searchButton: UIButton, view: UIView, topConstant: CGFloat, rightConstant: CGFloat) {

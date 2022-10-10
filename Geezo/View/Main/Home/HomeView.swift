@@ -16,8 +16,10 @@ final class HomeView: UIView {
     private let homeConstraints = HomeConstraints()
     
     // MARK: - Init UI Elements
+    
+    // MARK: - Scroll View and Content View
     private let scrollView: UIScrollView = {
-        var scrollView = UIScrollView()
+        let scrollView = UIScrollView()
         return scrollView.createScrollView(height: 950.0)
     }()
     
@@ -26,16 +28,18 @@ final class HomeView: UIView {
         return view.createContentView(height: 950.0)
     }()
     
+    // MARK: - Main Title and Search Button
     private let mainTitleLabel: UILabel = {
         let label = UILabel()
         return label.createLabel(font: "Roboto-Bold", size: 48.0, color: ColorStyle().neutral1, text: "Geezo")
     }()
     
-    private let searchButton: UIButton = {
+    public let searchButton: UIButton = {
         let button = UIButton()
         return button.createButton(type: .social, background: false, border: false, image: UIImage(named: "search"))
     }()
     
+    // MARK: - Albums
     private let newAlbumsLabel: UILabel = {
         let label = UILabel()
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "New Albums")
@@ -63,6 +67,7 @@ final class HomeView: UIView {
         return collectionView
     }()
     
+    // MARK: - Weekly Video
     private let weeklyLabel: UILabel = {
         let label = UILabel()
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Geezo Weekly")
@@ -92,6 +97,7 @@ final class HomeView: UIView {
         return label.createLabel(font: "Roboto-Regular", size: 12.0, color: .white, text: "The Weekend")
     }()
     
+    // MARK: - Weekly Slider
     private let weeklySliderView = UIView()
     
     private let weeklySlider: UISlider = {
@@ -103,7 +109,6 @@ final class HomeView: UIView {
         if let image = UIImage(named: "sliderThumb") {
             slider.setThumbImage(image, for: .normal)
         }
-        
         
         return slider
     }()
@@ -128,6 +133,7 @@ final class HomeView: UIView {
         return button
     }()
     
+    // MARK: - Recently Tracks
     private let recentlyTracksLabel: UILabel = {
         let label = UILabel()
         return label.createLabel(font: "Roboto-Bold", size: 22.0, color: ColorStyle().neutral1, text: "Recently Music")
@@ -157,6 +163,7 @@ final class HomeView: UIView {
     private func initViews() {
         backgroundColor = colorStyle.brand1
         
+        // MARK: - Scroll View and Content View
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         
@@ -168,7 +175,7 @@ final class HomeView: UIView {
         contentView.addSubview(viewAllButton)
         contentView.addSubview(albumsCollectionView)
         
-        // MARK: - Weekly
+        // MARK: - Weekly Video
         contentView.addSubview(weeklyLabel)
         contentView.addSubview(weeklyView)
         weeklyView.addSubview(weeklyImageView)
@@ -177,6 +184,7 @@ final class HomeView: UIView {
         weeklyView.addSubview(weeklySliderView)
         weeklyView.addSubview(weeklyPlayButton)
         
+        // MARK: - Weekly Slider
         weeklySliderView.addSubview(weeklySlider)
         weeklySliderView.addSubview(weeklySliderMinLabel)
         weeklySliderView.addSubview(weeklySliderMaxLabel)
@@ -188,15 +196,20 @@ final class HomeView: UIView {
     
     // MARK: - Constraints Method
     private func initConstraints() {
+        // MARK: - Scroll View and Content View
         mainConstraints.addConstraintsToScroll(scrollView, view: self)
+        mainConstraints.addConstraintsToContent(contentView, scrollView: scrollView)
         
+        // MARK: - Main Title and Search Button
         commonConstraints.addConstraintsToMainTitle(mainTitleLabel, view: contentView, leftConstant: 24.0, topConstant: 24.0, widthConstant: 140.0, heightConstant: 56.0)
         mainConstraints.addConstraintsToSearch(searchButton, view: contentView, topConstant: 44.0, rightConstant: -24.0)
         
+        // MARK: - New Albums
         mainConstraints.addConstraintsToLeftSubtitle(newAlbumsLabel, view: contentView, parent: mainTitleLabel, width: 125.0, height: 26.0, topConstant: 32.0)
         mainConstraints.addConstraintsToViewAll(viewAllButton, view: contentView, parent: searchButton, topConstant: 52.0)
         homeConstraints.addConstraintsToAlbums(albumsCollectionView, view: contentView, parent: newAlbumsLabel)
         
+        // MARK: - Weekly Video
         mainConstraints.addConstraintsToLeftSubtitle(weeklyLabel, view: contentView, parent: albumsCollectionView, width: 140.0, height: 26.0, topConstant: 60.0)
         homeConstraints.addConstraintsToWeeklyVideo(weeklyView, view: contentView, parent: weeklyLabel)
         homeConstraints.addConstraintsToWeeklyImage(weeklyImageView, view: weeklyView)
@@ -204,11 +217,13 @@ final class HomeView: UIView {
         homeConstraints.addConstraintsToWeeklyGroup(weeklyGroupLabel, view: weeklyView, parent: weeklyTitleLabel)
         homeConstraints.addConstraintsToWeeklyPlay(weeklyPlayButton, view: weeklyView)
         
+        // MARK: - Weekly Slider
         homeConstraints.addConstraintsToWeeklySliderView(weeklySliderView, view: weeklyView)
         homeConstraints.addConstraintsToWeeklySlider(weeklySlider, sliderView: weeklySliderView)
         homeConstraints.addConstraintsToTimeLabel(weeklySliderMinLabel, sliderView: weeklySliderView, type: .min)
         homeConstraints.addConstraintsToTimeLabel(weeklySliderMaxLabel, sliderView: weeklySliderView, type: .max)
         
+        // MARK: - Recently Tracks
         mainConstraints.addConstraintsToLeftSubtitle(recentlyTracksLabel, view: contentView, parent: weeklyView, width: 152.0, height: 26.0, topConstant: 40.0)
         homeConstraints.addConstraintsToRecentlyTracks(recentlyTracksTableView, view: contentView, parent: recentlyTracksLabel)
     }

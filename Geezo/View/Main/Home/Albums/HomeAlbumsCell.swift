@@ -8,7 +8,7 @@
 import UIKit
 
 final class HomeAlbumsCell: UICollectionViewCell {
-    // MARK: - Init Constraints
+    // MARK: - Constraints
     private let homeAlbumsConstraints = HomeAlbumsConstraints()
     
     // MARK: - Init UI Elements

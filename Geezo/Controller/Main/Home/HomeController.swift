@@ -27,12 +27,20 @@ final class HomeController: UIViewController {
         homeView.recentlyTracksTableView
     }
     
+    private var searchButton: UIButton {
+        homeView.searchButton
+    }
+    
     override func loadView() {
         view = homeView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        homeView.isUserInteractionEnabled = true
+        
+//        print("test")
         
         // MARK: - Connections
         albumsCollectionView.delegate = self
@@ -44,7 +52,17 @@ final class HomeController: UIViewController {
         // MARK: - Register
         albumsCollectionView.register(HomeAlbumsCell.self, forCellWithReuseIdentifier: albumsCellID)
         recentlyTracksTableView.register(HomeRecentlyTracksCell.self, forCellReuseIdentifier: tracksCellID)
+        
+        // MARK: - Targets
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchButtonPressed(sender:)))
+//        homeView.addGestureRecognizer(tapGestureRecognizer)
+        searchButton.addTarget(self, action: #selector(searchButtonPressed(sender:)), for: .touchUpInside)
     }
+    
+    @objc func searchButtonPressed(sender: UIView) {
+        print("test")
+    }
+    
 }
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {

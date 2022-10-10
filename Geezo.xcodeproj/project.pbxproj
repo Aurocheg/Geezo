@@ -76,6 +76,13 @@
 		DE877DA528F02035007121EF /* AccountConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE877DA428F02035007121EF /* AccountConstraints.swift */; };
 		DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */; };
 		DEA7DFF528ED5DA5003B3111 /* HomeAlbumsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */; };
+		DEAED55E28F1837900E4E95F /* SearchContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED55D28F1837900E4E95F /* SearchContoller.swift */; };
+		DEAED56228F183B300E4E95F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED56128F183B300E4E95F /* SearchView.swift */; };
+		DEAED56428F1841200E4E95F /* SearchConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED56328F1841200E4E95F /* SearchConstraints.swift */; };
+		DEAED56728F1867B00E4E95F /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED56628F1867B00E4E95F /* SearchModel.swift */; };
+		DEAED56F28F1925100E4E95F /* TopSearchingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED56E28F1925100E4E95F /* TopSearchingCollectionCell.swift */; };
+		DEAED57128F1926300E4E95F /* HistoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED57028F1926300E4E95F /* HistoryCollectionCell.swift */; };
+		DEAED57328F19F9900E4E95F /* HistoryAndTopSearchigCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAED57228F19F9900E4E95F /* HistoryAndTopSearchigCellConstraints.swift */; };
 		DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C33C28D8C5F200207AB8 /* TabBarController.swift */; };
 		DED4C34328D8C78000207AB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34228D8C78000207AB8 /* HomeController.swift */; };
 		DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4C34428D8C79A00207AB8 /* ExploreController.swift */; };
@@ -161,6 +168,13 @@
 		DE877DA428F02035007121EF /* AccountConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountConstraints.swift; sourceTree = "<group>"; };
 		DE9E727628EE07EB00654C43 /* HomeRecentlyTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentlyTracksCell.swift; sourceTree = "<group>"; };
 		DEA7DFF428ED5DA5003B3111 /* HomeAlbumsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumsConstraints.swift; sourceTree = "<group>"; };
+		DEAED55D28F1837900E4E95F /* SearchContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContoller.swift; sourceTree = "<group>"; };
+		DEAED56128F183B300E4E95F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DEAED56328F1841200E4E95F /* SearchConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConstraints.swift; sourceTree = "<group>"; };
+		DEAED56628F1867B00E4E95F /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		DEAED56E28F1925100E4E95F /* TopSearchingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSearchingCollectionCell.swift; sourceTree = "<group>"; };
+		DEAED57028F1926300E4E95F /* HistoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionCell.swift; sourceTree = "<group>"; };
+		DEAED57228F19F9900E4E95F /* HistoryAndTopSearchigCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAndTopSearchigCellConstraints.swift; sourceTree = "<group>"; };
 		DED4C33C28D8C5F200207AB8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DED4C34228D8C78000207AB8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DED4C34428D8C79A00207AB8 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
@@ -494,6 +508,7 @@
 		DE83A8C328DED9D800A1CF4E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DEAED56528F1866E00E4E95F /* Search */,
 				DE83A8D128DF1D4E00A1CF4E /* Home */,
 				DE83A8C528DED9FD00A1CF4E /* Explore */,
 				DE83A8D228DF1D5B00A1CF4E /* Radio */,
@@ -582,9 +597,54 @@
 			path = Recently;
 			sourceTree = "<group>";
 		};
+		DEAED55F28F1838A00E4E95F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED55D28F1837900E4E95F /* SearchContoller.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DEAED56028F183A000E4E95F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED57228F19F9900E4E95F /* HistoryAndTopSearchigCellConstraints.swift */,
+				DEAED56C28F1922A00E4E95F /* History */,
+				DEAED56D28F1923000E4E95F /* Top Searching */,
+				DEAED56128F183B300E4E95F /* SearchView.swift */,
+				DEAED56328F1841200E4E95F /* SearchConstraints.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DEAED56528F1866E00E4E95F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED56628F1867B00E4E95F /* SearchModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DEAED56C28F1922A00E4E95F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED57028F1926300E4E95F /* HistoryCollectionCell.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		DEAED56D28F1923000E4E95F /* Top Searching */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED56E28F1925100E4E95F /* TopSearchingCollectionCell.swift */,
+			);
+			path = "Top Searching";
+			sourceTree = "<group>";
+		};
 		DED4C34028D8C73300207AB8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DEAED55F28F1838A00E4E95F /* Search */,
 				DE83A8CD28DF1CE300A1CF4E /* Home */,
 				DE83A8CE28DF1CED00A1CF4E /* Explore */,
 				DE83A8CF28DF1CFA00A1CF4E /* Radio */,
@@ -597,6 +657,7 @@
 		DED4C34128D8C75400207AB8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DEAED56028F183A000E4E95F /* Search */,
 				DE683F0228D9AD0B00CCB5BA /* Home */,
 				DE74D80128DE2DE40046A878 /* Explore */,
 				DE74D80428DE2E6F0046A878 /* Radio */,
@@ -714,6 +775,7 @@
 				DE5DF70328EF407800DE8413 /* RadioCollectionCell.swift in Sources */,
 				DE1B7B5E28E4ABB100C35B72 /* UIButtonExtension.swift in Sources */,
 				DE64BF2828D7921900C6139B /* VerifyDoneController.swift in Sources */,
+				DEAED56728F1867B00E4E95F /* SearchModel.swift in Sources */,
 				DE1B7B6228E4ACFF00C35B72 /* UITextFieldExtension.swift in Sources */,
 				DE74D80728DE32570046A878 /* ExploreConstraints.swift in Sources */,
 				DEA7DFF528ED5DA5003B3111 /* HomeAlbumsConstraints.swift in Sources */,
@@ -731,6 +793,8 @@
 				DE4DA57728CDEE8A00E3DE1B /* SignInView.swift in Sources */,
 				DE04D30928E6E54E00458078 /* ExploreTrendingsConstraints.swift in Sources */,
 				DE877DA528F02035007121EF /* AccountConstraints.swift in Sources */,
+				DEAED57328F19F9900E4E95F /* HistoryAndTopSearchigCellConstraints.swift in Sources */,
+				DEAED56228F183B300E4E95F /* SearchView.swift in Sources */,
 				DE9E727728EE07EB00654C43 /* HomeRecentlyTracksCell.swift in Sources */,
 				DE64BF1528D75D1100C6139B /* ForgotPasswordExtensions.swift in Sources */,
 				DE27953728D4E08200375D48 /* SignInConstraints.swift in Sources */,
@@ -746,6 +810,7 @@
 				DE64BF0E28D7556800C6139B /* ForgotPasswordController.swift in Sources */,
 				DE1B7B6828E4B54F00C35B72 /* HomeModel.swift in Sources */,
 				DE5DF70528EF41B000DE8413 /* RadioCollectionConstraints.swift in Sources */,
+				DEAED56428F1841200E4E95F /* SearchConstraints.swift in Sources */,
 				DE1B7B6628E4B4F200C35B72 /* ExploreModel.swift in Sources */,
 				DED4C34528D8C79A00207AB8 /* ExploreController.swift in Sources */,
 				DED4C34B28D8DD6F00207AB8 /* HomeView.swift in Sources */,
@@ -754,6 +819,7 @@
 				DE5DF6FD28EF066300DE8413 /* RadioConstraints.swift in Sources */,
 				DE64BF3028D7928C00C6139B /* VerifyCodeView.swift in Sources */,
 				DE64BF3428D792A400C6139B /* VerifyDoneView.swift in Sources */,
+				DEAED55E28F1837900E4E95F /* SearchContoller.swift in Sources */,
 				DED4C33D28D8C5F200207AB8 /* TabBarController.swift in Sources */,
 				DE3519E628F0B6250093055C /* RecentActivityCellConstraints.swift in Sources */,
 				DE1B7B6C28E4B59700C35B72 /* AccountModel.swift in Sources */,
@@ -761,7 +827,9 @@
 				DE737CA528EC25A300BCE987 /* TopicsController.swift in Sources */,
 				DE64BF2628D7920600C6139B /* VerifyCodeController.swift in Sources */,
 				DE737CA728EC25C900BCE987 /* TopicsView.swift in Sources */,
+				DEAED56F28F1925100E4E95F /* TopSearchingCollectionCell.swift in Sources */,
 				DE6B9C5628EC936100B52D0A /* UICollectionViewExtension.swift in Sources */,
+				DEAED57128F1926300E4E95F /* HistoryCollectionCell.swift in Sources */,
 				DE64BF1A28D7606A00C6139B /* ChangePasswordView.swift in Sources */,
 				DE12F9E028C8F19F00F416EF /* AppDelegate.swift in Sources */,
 				DE3519DE28F0A4D10093055C /* LibraryTableCell.swift in Sources */,
